@@ -205,7 +205,7 @@ namespace StoDemoLauncher
         private void open_Event(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.InitialDirectory = this.gameClient.GetDemosPath(GameServer.HOLODECK);
+            dialog.InitialDirectory = this.gameClient.GetDemosPath(GameServer.LIVE);
             dialog.Filter = "Demo files (*.demo)|*.demo|All files (*.*)|*.*";
 
             DialogResult result = dialog.ShowDialog();
@@ -415,7 +415,7 @@ namespace StoDemoLauncher
         /// <param name="e">Event parameters</param>
         private void openHolodeckDemosFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.gameClient.OpenDemosFolder(GameServer.HOLODECK);
+            this.gameClient.OpenDemosFolder(GameServer.LIVE);
         }
 
         /// <summary>
@@ -425,7 +425,7 @@ namespace StoDemoLauncher
         /// <param name="e">Event parameters</param>
         private void openTribbleDemosFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.gameClient.OpenDemosFolder(GameServer.TRIBBLE);
+            this.gameClient.OpenDemosFolder(GameServer.PLAYTEST);
         }
 
         /// <summary>
@@ -445,7 +445,7 @@ namespace StoDemoLauncher
         /// <param name="e">Event parameters</param>
         private void openHolodeckScreenshotsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.gameClient.OpenScreenshotsFolder(GameServer.HOLODECK);
+            this.gameClient.OpenScreenshotsFolder(GameServer.LIVE);
         }
 
         /// <summary>
@@ -455,7 +455,7 @@ namespace StoDemoLauncher
         /// <param name="e">Event parameters</param>
         private void openTribbleScreenshotsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.gameClient.OpenScreenshotsFolder(GameServer.TRIBBLE);
+            this.gameClient.OpenScreenshotsFolder(GameServer.PLAYTEST);
         }
 
         /// <summary>
@@ -763,7 +763,7 @@ namespace StoDemoLauncher
         private void InitializeToolStrip()
         {
             // if there is a tribble installation, add missing tribble entries
-            if (this.gameClient.TribbleExists)
+            if (this.gameClient.PlaytestExists)
             {
                 if (!this.openDemosFolderToolStripDropDownButton.DropDownItems.Contains(this.openTribbleDemosFolderToolStripMenuItem))
                 {
@@ -818,7 +818,7 @@ namespace StoDemoLauncher
         private void InitializeMenuStrip()
         {
             // if there is a tribble installation, add missing tribble entries
-            if (this.gameClient.TribbleExists)
+            if (this.gameClient.PlaytestExists)
             {
                 if (!this.openDemosFolderMenuItem.DropDownItems.Contains(this.openTribbleDemosFolderMenuItem))
                 {
@@ -961,16 +961,16 @@ namespace StoDemoLauncher
         {
             this.demoInfos.Clear();
             List<string> demoFiles = new List<string>();
-            if(System.IO.Directory.Exists(this.gameClient.GetDemosPath(GameServer.HOLODECK)))
+            if(System.IO.Directory.Exists(this.gameClient.GetDemosPath(GameServer.LIVE)))
             {
                 // Holodeck demos
-               demoFiles.AddRange(gameClient.GetDemoFileList(GameServer.HOLODECK));
+               demoFiles.AddRange(gameClient.GetDemoFileList(GameServer.LIVE));
             }
             // Tribble demos
-            if (this.gameClient.TribbleExists
-                && System.IO.Directory.Exists(this.gameClient.GetDemosPath(GameServer.TRIBBLE)))
+            if (this.gameClient.PlaytestExists
+                && System.IO.Directory.Exists(this.gameClient.GetDemosPath(GameServer.PLAYTEST)))
             {
-                demoFiles.AddRange(gameClient.GetDemoFileList(GameServer.TRIBBLE));
+                demoFiles.AddRange(gameClient.GetDemoFileList(GameServer.PLAYTEST));
             }
             // Redshirt demos
             if (this.gameClient.RedshirtExists

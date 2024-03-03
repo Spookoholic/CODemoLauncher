@@ -22,7 +22,7 @@ namespace StoDemoLauncher
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Find the installation location of STO
-            string stoInstallLocation = GameClient.FindStoDirectory();
+            string stoInstallLocation = GameClient.FindCoDirectory();
 
             // Create the form, if a valid path was found
             if (!stoInstallLocation.Equals(""))

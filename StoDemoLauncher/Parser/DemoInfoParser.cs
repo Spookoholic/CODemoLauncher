@@ -39,8 +39,8 @@ namespace StoDemoLauncher.Parser
             result.Modify = fileInfo.LastWriteTime;
 
             // determine server
-            if (filename.Contains(config.GetStringValue(GameClient.GameClientIniGroup, GameClient.HolodeckPathIniKey))) result.Server = GameServer.HOLODECK;
-            else if (filename.Contains(config.GetStringValue(GameClient.GameClientIniGroup, GameClient.TribblePathIniKey))) result.Server = GameServer.TRIBBLE;
+            if (filename.Contains(config.GetStringValue(GameClient.GameClientIniGroup, GameClient.LivePathIniKey))) result.Server = GameServer.LIVE;
+            else if (filename.Contains(config.GetStringValue(GameClient.GameClientIniGroup, GameClient.PlaytestPathIniKey))) result.Server = GameServer.PLAYTEST;
             else if (filename.Contains(config.GetStringValue(GameClient.GameClientIniGroup, GameClient.RedshirtPathIniKey))) result.Server = GameServer.REDSHIRT;
             else result.Server = GameServer.EXTERN;
         }

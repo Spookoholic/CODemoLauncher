@@ -41,8 +41,8 @@ namespace StoDemoLauncher
             // Advanced Tab
             // Game Client Group
             this.stoInstallationPathTextBox.Text = this.gameClient.InstallLocation;
-            this.holodeckPathTextBox.Text = this.gameClient.HolodeckPath;
-            this.tribblePathTextBox.Text = this.gameClient.TribblePath;
+            this.holodeckPathTextBox.Text = this.gameClient.LivePath;
+            this.tribblePathTextBox.Text = this.gameClient.PlaytestPath;
             this.redshirtPathTextBox.Text = this.gameClient.RedshirtPath;
         }
 
@@ -104,7 +104,7 @@ namespace StoDemoLauncher
             if (dialogResult == DialogResult.OK)
             {
                 this.stoInstallationPathTextBox.Text = folderBrowserDialog.SelectedPath;
-                if (!GameClient.ValidateStoInstallationPath(this.stoInstallationPathTextBox.Text))
+                if (!GameClient.ValidateCoInstallationPath(this.stoInstallationPathTextBox.Text))
                 {
                     MessageBox.Show(this,
                         "The folder you selected does not seem to be the folder\n" +
@@ -179,14 +179,14 @@ namespace StoDemoLauncher
 
                 // Advanced tab
                 // Game Client group
-                string stoInstallDirectory = GameClient.FindStoDirectory();
+                string stoInstallDirectory = GameClient.FindCoDirectory();
                 if (stoInstallDirectory != "")
                 {
                     this.gameClient.UpdatePaths(stoInstallDirectory);
                 }
                 this.stoInstallationPathTextBox.Text = this.gameClient.InstallLocation;
-                this.holodeckPathTextBox.Text = this.gameClient.HolodeckPath;
-                this.tribblePathTextBox.Text = this.gameClient.TribblePath;
+                this.holodeckPathTextBox.Text = this.gameClient.LivePath;
+                this.tribblePathTextBox.Text = this.gameClient.PlaytestPath;
                 this.redshirtPathTextBox.Text = this.gameClient.RedshirtPath;
             }
         }
@@ -213,7 +213,7 @@ namespace StoDemoLauncher
             // Advanced tab
             // Game Client group
             // Game client path
-            if (GameClient.ValidateStoInstallationPath(this.stoInstallationPathTextBox.Text))
+            if (GameClient.ValidateCoInstallationPath(this.stoInstallationPathTextBox.Text))
             {
                 this.config.PutValue(GameClient.GameClientIniGroup, GameClient.PathIniKey, this.stoInstallationPathTextBox.Text);
             }
@@ -231,11 +231,11 @@ namespace StoDemoLauncher
             // Holodeck path
             if (GameClient.ValidateServerPath(this.holodeckPathTextBox.Text))
             {
-                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.HolodeckPathIniKey, this.holodeckPathTextBox.Text);
+                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.LivePathIniKey, this.holodeckPathTextBox.Text);
             }
             else
             {
-                this.holodeckPathTextBox.Text = this.gameClient.HolodeckPath;
+                this.holodeckPathTextBox.Text = this.gameClient.LivePath;
                 MessageBox.Show(this,
                     "The folder you selected does not seem to be a game client\n" +
                     "installation. Your changes to the Holodeck client path\n" +
@@ -247,11 +247,11 @@ namespace StoDemoLauncher
             // Tribble path
             if (GameClient.ValidateServerPath(this.tribblePathTextBox.Text))
             {
-                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.TribblePathIniKey, this.tribblePathTextBox.Text);
+                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.PlaytestPathIniKey, this.tribblePathTextBox.Text);
             }
             else
             {
-                this.tribblePathTextBox.Text = this.gameClient.TribblePath;
+                this.tribblePathTextBox.Text = this.gameClient.PlaytestPath;
                 MessageBox.Show(this,
                     "The folder you selected does not seem to be a game client\n" +
                     "installation. Your changes to the Tribble client path\n" +

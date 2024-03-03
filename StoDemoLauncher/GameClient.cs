@@ -9,21 +9,24 @@ using System.IO;
 using StoDemoLauncher.Helper;
 using Microsoft.Win32;
 
+// TODO:    Remove redshirt/Beta shard info tracking as it is unnecessary for Champions Online. 
+//          (CO only has 2 shards, Live and Playtest. There is no Beta shard.)
+
 namespace StoDemoLauncher
 {
     /// <summary>
-    /// STO servers
+    /// CO Servers
     /// </summary>
     public enum GameServer
     {
-        HOLODECK,
-        TRIBBLE,
+        LIVE,
+        PLAYTEST,
         REDSHIRT,
         EXTERN
     }
 
     /// <summary>
-    /// The valid file types for STO screen shots
+    /// The valid file types for CO screenshots
     /// </summary>
     public enum ImageFileExtension
     {
@@ -61,7 +64,7 @@ namespace StoDemoLauncher
     }
 
     /// <summary>
-    /// Abstraction of the STO installation on the user's machine. Contains a
+    /// Abstraction of the CO installation on the user's machine. Contains a
     /// lot of convineance methods.
     /// </summary>
     public class GameClient
@@ -69,30 +72,31 @@ namespace StoDemoLauncher
         // begin config constants
         public const string GameClientIniGroup = "GameClient";
         public const string PathIniKey = "path";
-        public const string HolodeckPathIniKey = "holodeckPath";
-        public const string TribblePathIniKey = "tribblePath";
+        public const string LivePathIniKey = "livePath";
+        public const string PlaytestPathIniKey = "playtestPath";
         public const string RedshirtPathIniKey = "redshirtPath";
-        public const string StoDemoLauncherIniGroup = "StoDemoLauncher";
+        public const string CoDemoLauncherIniGroup = "CoDemoLauncher";
         public const string VersionIniKey = "version";
 
         // end config constants
 
         /// <summary>
-        /// The absolute path to the directory containing "Star Trek Online.exe"
+        /// The absolute path to the directory containing "Champions Online.exe"
         /// </summary>
         private string installLocation;
 
         /// <summary>
-        /// The absolute path to the directory containing "GameClient.exe" for Holodeck
+        /// The absolute path to the directory containing "GameClient.exe" for the Live shard
         /// </summary>
-        private string holodeckPath;
+        private string livePath;
 
         /// <summary>
-        /// The absolute path to the directory containing "GameClient.exe" for Tribble
+        /// The absolute path to the directory containing "GameClient.exe" for the Playtest shard
         /// </summary>
-        private string tribblePath;
+        private string playtestPath;
 
         /// <summary>
+        /// NOTE: This is not used by Champions Online as it does not have a Beta shard. 
         /// The absolute path to the directory containing "GameClient.exe" for Redshirt
         /// </summary>
         private string redshirtPath;
@@ -100,9 +104,10 @@ namespace StoDemoLauncher
         /// <summary>
         /// Indicates, if there is a playtest directory
         /// </summary>
-        private bool tribbleExists = false;
+        private bool playtestExists = false;
 
         /// <summary>
+        /// NOTE: This is not used by Champions Online as it does not have a Beta shard. 
         /// Indicates, if there is a playtest directory
         /// </summary>
         private bool redshirtExists = false;
@@ -110,7 +115,7 @@ namespace StoDemoLauncher
         // begin properties
 
         /// <summary>
-        /// The absolute path to the directory containing "Star Trek Online.exe"
+        /// The absolute path to the directory containing "Champions Online.exe"
         /// </summary>
         public string InstallLocation
         {
@@ -121,28 +126,29 @@ namespace StoDemoLauncher
         }
 
         /// <summary>
-        /// The absolute path to the directory containing "GameClient.exe" for Holodeck
+        /// The absolute path to the directory containing "GameClient.exe" for the Live shard
         /// </summary>
-        public string HolodeckPath
+        public string LivePath
         {
             get
             {
-                return this.holodeckPath;
+                return this.livePath;
             }
         }
 
         /// <summary>
-        /// The absolute path to the directory containing "GameClient.exe" for Tribble
+        /// The absolute path to the directory containing "GameClient.exe" for Playtest shard
         /// </summary>
-        public string TribblePath
+        public string PlaytestPath
         {
             get
             {
-                return this.tribblePath;
+                return this.playtestPath;
             }
         }
 
         /// <summary>
+        /// NOTE: This is not used by Champions Online as it does not have a Beta branch. 
         /// The absolute path to the directory containing "GameClient.exe" for Redshirt
         /// </summary>
         public string RedshirtPath
@@ -154,18 +160,19 @@ namespace StoDemoLauncher
         }
 
         /// <summary>
-        /// Indicates, if there is a playtest directory
+        /// Indicates, if there is a Playtest directory
         /// </summary>
-        public bool TribbleExists
+        public bool PlaytestExists
         {
             get
             {
-                return this.tribbleExists;
+                return this.playtestExists;
             }
         }
 
         /// <summary>
-        /// Indicates, if there is a playtest directory
+        /// NOTE: This is not used by Champions Online as it does not have a Beta branch. 
+        /// Indicates, if there is a Beta directory
         /// </summary>
         public bool RedshirtExists
         {
@@ -181,51 +188,51 @@ namespace StoDemoLauncher
         /// Creates a new game client object
         /// </summary>
         /// <param name="installLocation">The absolute path to the directory
-        /// containing "Star Trek Online.exe"</param>
+        /// containing "Champions Online.exe"</param>
         public GameClient(string installLocation)
         {
             this.UpdatePaths(installLocation);
         }
-// end constructor
+        // end constructor
 
         /// <summary>
-        /// Looks for the Star Trek Online installation location (the
-        /// directory containing "Star Trek Online.exe"). If the location
+        /// Looks for the Champions Online installation location (the
+        /// directory containing "Champions Online.exe"). If the location
         /// cannot automatically be retrieved from the tools config.ini file 
         /// we will continue searching the registry. If we can't find it there
         /// either the user is asked to browse and select
-        /// "Star Trek Online.exe". If the user does not provide the correct
+        /// "Champions Online.exe". If the user does not provide the correct
         /// file or cancels the dialog, the empty string is returned.
         /// </summary>
-        /// <returns>The absolut path to the Star Trek Online installation
+        /// <returns>The absolut path to the Champions Online installation
         /// location or the empty string, if all attemts to find it have
         /// failed.</returns>
-        static public string FindStoDirectory()
+        static public string FindCoDirectory()
         {
-            string stoInstallLocation = "";
+            string coInstallLocation = "";
 
             // try to fetch path from config file
             ConfigurationFile config = ConfigurationFile.GetInstance();
 
             if (config.Contains(GameClientIniGroup, PathIniKey))
             {
-                stoInstallLocation = config.GetStringValue(GameClientIniGroup, PathIniKey);
-                if (GameClient.ValidateStoInstallationPath(stoInstallLocation))
+                coInstallLocation = config.GetStringValue(GameClientIniGroup, PathIniKey);
+                if (GameClient.ValidateCoInstallationPath(coInstallLocation))
                 {
-                    return stoInstallLocation;
+                    return coInstallLocation;
                 }
                 else
                 {
                     MessageBox.Show(
-                    "The Star Trek Online installation path from the config.ini\n" +
+                    "The Champions Online installation path from the config.ini\n" +
                     "is invalid. Trying to read installation directory from\n" +
                     "registry.",
                     "Invalid Path In config.ini",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                     config.Remove(GameClientIniGroup, PathIniKey);
-                    config.Remove(GameClientIniGroup, HolodeckPathIniKey);
-                    config.Remove(GameClientIniGroup, TribblePathIniKey);
+                    config.Remove(GameClientIniGroup, LivePathIniKey);
+                    config.Remove(GameClientIniGroup, PlaytestPathIniKey);
                     config.Remove(GameClientIniGroup, RedshirtPathIniKey);
                     config.Save();
                 }
@@ -244,22 +251,22 @@ namespace StoDemoLauncher
             }
             if (pathKey != null)
             {
-                pathKey = pathKey.OpenSubKey("Star Trek Online");
+                pathKey = pathKey.OpenSubKey("Champions Online");
             }
             if (pathKey != null && pathKey.GetValue("InstallLocation") != null)
             {
-                stoInstallLocation = pathKey.GetValue("InstallLocation").ToString();
+                coInstallLocation = pathKey.GetValue("InstallLocation").ToString();
                 pathKey.Close();
             }
             else
             {
                 DialogResult warningResult = MessageBox.Show(
-                    "Star Trek Online could not be found automatically.\n" +
+                    "Champions Online could not be found automatically.\n" +
                     "This problem may occur, if the game was not installed\n" +
                     "using the setup, or the game was installed using a\n" +
                     "different account.\n" +
                     "If you want to continue, please select the\n" +
-                    "\"Star Trek Online.exe\" from your installation directory\n" +
+                    "\"Champions Online.exe\" from your installation directory\n" +
                     "in the following dialog.",
                     "Could Not Find Star Trek Online",
                     MessageBoxButtons.OKCancel,
@@ -271,15 +278,15 @@ namespace StoDemoLauncher
                     while (!correctPath)
                     {
                         OpenFileDialog openFileDialog = new OpenFileDialog();
-                        openFileDialog.Filter = "Star Trek Online.exe|Star Trek Online.exe";
+                        openFileDialog.Filter = "ChampionsOnline.exe|Champins Online.exe";
                         if (openFileDialog.ShowDialog() == DialogResult.OK)
                         {
-                            stoInstallLocation = openFileDialog.FileName.Substring(0, openFileDialog.FileName.LastIndexOf("\\"));
-                            if (GameClient.ValidateStoInstallationPath(stoInstallLocation))
+                            coInstallLocation = openFileDialog.FileName.Substring(0, openFileDialog.FileName.LastIndexOf("\\"));
+                            if (GameClient.ValidateCoInstallationPath(coInstallLocation))
                             {
                                 correctPath = true;
-                                pathKey = Registry.CurrentUser.CreateSubKey("SOFTWARE").CreateSubKey("Cryptic").CreateSubKey("Star Trek Online");
-                                pathKey.SetValue("InstallLocation", stoInstallLocation);
+                                pathKey = Registry.CurrentUser.CreateSubKey("SOFTWARE").CreateSubKey("Cryptic").CreateSubKey("Champions Online");
+                                pathKey.SetValue("InstallLocation", coInstallLocation);
                             }
                         }
                         if (!correctPath)
@@ -287,9 +294,9 @@ namespace StoDemoLauncher
                             DialogResult preLaunchExitResult = MessageBox.Show(
                                 "No valid installation directory.\n" +
                                 "You have not selected a valid installation\n" +
-                                "directory for Star Trek Online.\n" +
+                                "directory for Champions Online.\n" +
                                 "Try again or exit the Demo Launcher.",
-                                "Could Not Find Star Trek Online",
+                                "Could Not Find Champions Online",
                                 MessageBoxButtons.RetryCancel,
                                 MessageBoxIcon.Warning,
                                 MessageBoxDefaultButton.Button1);
@@ -303,22 +310,22 @@ namespace StoDemoLauncher
             }
 
             // Save config file
-            config.PutValue(GameClientIniGroup, PathIniKey, stoInstallLocation);
+            config.PutValue(GameClientIniGroup, PathIniKey, coInstallLocation);
             config.Save();
 
-            return stoInstallLocation;
+            return coInstallLocation;
         }
 
         /// <summary>
-        /// Checks the given directory for a "Star Trek Online.exe" and a
-        /// Holodeck server installation.
+        /// Checks the given directory for a "Champions Online Online.exe" and a
+        /// Live shard server installation.
         /// </summary>
         /// <param name="path">Path to validate</param>
-        /// <returns>True if a Star Trek Online.exe and Holodeck installation
+        /// <returns>True if a Champions Online.exe and a Live shard installation
         /// were found in the given folder</returns>
-        static public bool ValidateStoInstallationPath(string path)
+        static public bool ValidateCoInstallationPath(string path)
         {
-            return System.IO.File.Exists(path + "\\Star Trek Online.exe") && GameClient.ValidateServerPath(path + "\\Star Trek Online\\Live\\x64");
+            return System.IO.File.Exists(path + "\\Champions Online.exe") && GameClient.ValidateServerPath(path + "\\Champions Online\\Live");
         }
 
         /// <summary>
@@ -335,28 +342,29 @@ namespace StoDemoLauncher
         /// <summary>
         /// Forces game client to check for changed paths
         /// </summary>
-        public void UpdatePaths(string stoInstallationPath)
+        public void UpdatePaths(string coInstallationPath)
         {
-            this.installLocation = stoInstallationPath;
+            this.installLocation = coInstallationPath;
 
-            // fetch holodeck directory from config file
+            // Fetch Live shard directory from config file
             ConfigurationFile config = ConfigurationFile.GetInstance();
-            if (!config.Contains(GameClientIniGroup, HolodeckPathIniKey))
+            if (!config.Contains(GameClientIniGroup, LivePathIniKey))
             {
-                config.PutValue(GameClientIniGroup, HolodeckPathIniKey, installLocation + "\\Star Trek Online\\Live");
+                config.PutValue(GameClientIniGroup, LivePathIniKey, installLocation + "\\Champions Online\\Live");
             }
-            this.holodeckPath = config.GetStringValue(GameClientIniGroup, HolodeckPathIniKey);
+            this.livePath = config.GetStringValue(GameClientIniGroup, LivePathIniKey);
 
-            // fetch tribble directory from tribble file
-            if (!config.Contains(GameClientIniGroup, TribblePathIniKey))
+            // Fetch Playest shard directory from config file
+            if (!config.Contains(GameClientIniGroup, PlaytestPathIniKey))
             {
-                config.PutValue(GameClientIniGroup, TribblePathIniKey, installLocation + "\\Star Trek Online\\Playtest");
+                config.PutValue(GameClientIniGroup, PlaytestPathIniKey, installLocation + "\\Champions Online\\Playtest");
             }
-            this.tribblePath = config.GetStringValue(GameClientIniGroup, TribblePathIniKey);
+            this.playtestPath = config.GetStringValue(GameClientIniGroup, PlaytestPathIniKey);
 
-            this.tribbleExists = System.IO.Directory.Exists(this.tribblePath);
+            this.playtestExists = System.IO.Directory.Exists(this.playtestPath);
 
-            // fetch redshirt directory from tribble file
+            // Fetch redshirt directory from config file
+            // NOTE: This is not used as Champions Online does not have a Beta shard
             if (!config.Contains(GameClientIniGroup, RedshirtPathIniKey))
             {
                 config.PutValue(GameClientIniGroup, RedshirtPathIniKey, installLocation + "\\Star Trek Online\\Beta");
@@ -371,7 +379,7 @@ namespace StoDemoLauncher
         /// </summary>
         public void Refresh()
         {
-            this.tribbleExists = System.IO.Directory.Exists(this.tribblePath);
+            this.playtestExists = System.IO.Directory.Exists(this.playtestPath);
             this.redshirtExists = System.IO.Directory.Exists(this.redshirtPath);
         }
 
@@ -391,12 +399,12 @@ namespace StoDemoLauncher
         }
 
         /// <summary>
-        /// Returns the drive letter of the STO installation
+        /// Returns the drive letter of the CO installation
         /// </summary>
-        /// <returns>The STO installation drive, e.g., "C:\"</returns>
+        /// <returns>The CO installation drive, e.g., "C:\"</returns>
         public string GetDrive()
         {
-            return this.holodeckPath.Substring(0, this.holodeckPath.IndexOf("\\") + 1);
+            return this.livePath.Substring(0, this.livePath.IndexOf("\\") + 1);
         }
         
         /// <summary>
@@ -407,10 +415,10 @@ namespace StoDemoLauncher
         /// <returns></returns>
         public string GetPath(GameServer server)
         {
-            if (server == GameServer.HOLODECK) return this.HolodeckPath;
-            else if (server == GameServer.TRIBBLE) return this.TribblePath;
+            if (server == GameServer.LIVE) return this.LivePath;
+            else if (server == GameServer.PLAYTEST) return this.PlaytestPath;
             else if (server == GameServer.REDSHIRT) return this.RedshirtPath;
-            else if (server == GameServer.EXTERN) return this.HolodeckPath;
+            else if (server == GameServer.EXTERN) return this.LivePath;
             return "";
         }
 
@@ -421,10 +429,10 @@ namespace StoDemoLauncher
         /// <returns></returns>
         public static string GetServerName(GameServer server)
         {
-            if (server == GameServer.HOLODECK) return "Holodeck";
-            else if (server == GameServer.TRIBBLE) return "Tribble";
+            if (server == GameServer.LIVE) return "Live";
+            else if (server == GameServer.PLAYTEST) return "Playtest";
             else if (server == GameServer.REDSHIRT) return "Redshirt";
-            else if (server == GameServer.EXTERN) return "Unknown (will run on Holodeck)";
+            else if (server == GameServer.EXTERN) return "Unknown (will run on Live)";
             return "";
         }
 
@@ -486,7 +494,7 @@ namespace StoDemoLauncher
         {
             if (!this.OpenFolder(this.GetScreenshotsPath(server)))
             {
-                MessageBox.Show("There is no screen shots folder for " + GameClient.GetServerName(server) + ".",
+                MessageBox.Show("There is no screenshots folder for " + GameClient.GetServerName(server) + ".",
                     "No Screen Shots Folder Found",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -503,11 +511,11 @@ namespace StoDemoLauncher
         /// installation</returns>
         private string GetGameClientPath(GameServer server)
         {
-            return this.GetPath(server) + "\\x64\\GameClient.exe";
+            return this.GetPath(server) + "\\GameClient.exe";
         }
 
         /// <summary>
-        /// Opens "Star Trek Online" in "demo_play" mode with the given demo.
+        /// Opens "Champions Online" in "demo_play" mode with the given demo.
         /// </summary>
         /// <param name="demo">The demo to be played</param>
         public void PlayDemo(DemoInfo demo)
@@ -540,7 +548,7 @@ namespace StoDemoLauncher
         }
 
         /// <summary>
-        /// Opens "Star Trek Online" in "demo_save_images" mode with the given
+        /// Opens "Champions Online" in "demo_save_images" mode with the given
         /// demo.
         /// </summary>
         /// <param name="demo">The demo to be rendered.</param>
@@ -584,7 +592,7 @@ namespace StoDemoLauncher
         }
 
         /// <summary>
-        /// Opens "Star Trek Online" in "demo_play_30fps" mode with the given
+        /// Opens "Champions Online" in "demo_play_30fps" mode with the given
         /// demo.
         /// </summary>
         /// <param name="demo">The demo for which to record audio.</param>
@@ -621,7 +629,7 @@ namespace StoDemoLauncher
         }
 
         /// <summary>
-        /// Runs a selected demo file. If STO is running already, the user
+        /// Runs a selected demo file. If CO is running already, the user
         /// will be promped to either cancel or force an additional instance
         /// to run.
         /// </summary>
@@ -630,14 +638,14 @@ namespace StoDemoLauncher
             // By default, run the demo
             DialogResult proceed = DialogResult.Yes;
 
-            // Check is STO is running
-            if (this.IsProcessRunning("GameClient", "Star Trek Online"))
+            // Check is CO is running
+            if (this.IsProcessRunning("GameClient", "Champions Online"))
             {
                 // Ask user if she wants to run an additional instance
-                proceed = MessageBox.Show("Star Trek Online is already running.\n" +
-                    "Running multiple instances of STO might cause significant performance issues.\n" +
+                proceed = MessageBox.Show("Champions Online is already running.\n" +
+                    "Running multiple instances of CO might cause significant performance issues.\n" +
                     "Do you really want to run the demo?",
-                    "STO Already Running",
+                    "CO Already Running",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2);
@@ -654,6 +662,11 @@ namespace StoDemoLauncher
 
                 // append general arguments and launch
                 gameClient.StartInfo.Arguments = " " + arguments;
+
+                //TODO: DEBUG: Remove these two lines. Just here to make sure the program is constructing the right paths for CO
+                Console.WriteLine(gameClient.StartInfo.FileName.ToString());
+                Console.WriteLine(gameClient.StartInfo.WorkingDirectory.ToString()); 
+                
                 gameClient.Start();
             }
         }
@@ -773,7 +786,7 @@ namespace StoDemoLauncher
         /// <returns>The contents of the file</returns>
         public void PlayPreview(List<string> contents, GameServer server)
         {
-            string previewFileName = this.GetDemosPath(server) + "\\StoDemoLauncherPreview.demo";
+            string previewFileName = this.GetDemosPath(server) + "\\CoDemoLauncherPreview.demo";
             System.IO.File.WriteAllLines(previewFileName, contents.ToArray());
             if (System.IO.File.Exists(previewFileName))
             {
@@ -782,7 +795,7 @@ namespace StoDemoLauncher
         }
 
         /// <summary>
-        /// Writes a demo file to HDD from a string list
+        /// Writes a demo file to disk from a string list
         /// </summary>
         /// <param name="info">The DemoInfo of the file to be written</param>
         /// <param name="fileContents">The contents of the file to be written</param>
