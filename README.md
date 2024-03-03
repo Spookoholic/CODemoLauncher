@@ -1,4 +1,4 @@
-# STODemoLauncher
+# CODemoLauncher
 A fork of the STODemoLauncher by rachelgarrett and RadioActivitii with the goal of making the program support Champions Online and its features.
 
 
