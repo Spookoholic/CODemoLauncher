@@ -44,19 +44,19 @@ namespace CoDemoLauncher
 // end config constants
 
         /// <summary>
-        /// Link to STO forum thread
+        /// Link to Champions Online Demo Guide
         /// </summary>
-        private static string forumThreadUrl = "http://forums.startrekonline.com/showthread.php?t=198721";
+        private static string demoGuideUrl = "http://forums.startrekonline.com/showthread.php?t=198721";
 
         /// <summary>
-        /// Link to STO sourceforge project
+        /// Link to CO Demo Launcher GitHub page
         /// </summary>
-        private static string sourceforgeUrl = "https://github.com/RadioActivitii/STODemoLauncher";
+        private static string gitHubUrl = "https://github.com/Spookoholic/CODemoLauncher";
 
         /// <summary>
-        /// Link to STO sourceforge project
+        /// Link to CO Demo Launcher Help page
         /// </summary>
-        private static string wikiUrl = "https://github.com/RadioActivitii/STODemoLauncher/releases";
+        private static string helpUrl = "https://github.com/Spookoholic/CODemoLauncher/releases";
 
         /// <summary>
         /// Link to auto-update page
@@ -409,63 +409,63 @@ namespace CoDemoLauncher
         }
 
         /// <summary>
-        /// Callback for the "Open Holodeck Demos Folder" tool strip menu item
+        /// Callback for the "Open Live Demos Folder" tool strip menu item
         /// </summary>
-        /// <param name="sender">The "Open Holodeck Demos Folder" tool strip menu item</param>
+        /// <param name="sender">The "Open Live Demos Folder" tool strip menu item</param>
         /// <param name="e">Event parameters</param>
-        private void openHolodeckDemosFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openLiveDemosFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.gameClient.OpenDemosFolder(GameServer.LIVE);
         }
 
         /// <summary>
-        /// Callback for the "Open Tribble Demos Folder" tool strip menu item
+        /// Callback for the "Open Playtest Demos Folder" tool strip menu item
         /// </summary>
-        /// <param name="sender">The "Open Tribble Demos Folder" tool strip menu item</param>
+        /// <param name="sender">The "Open Playtest Demos Folder" tool strip menu item</param>
         /// <param name="e">Event parameters</param>
-        private void openTribbleDemosFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openPlaytestDemosFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.gameClient.OpenDemosFolder(GameServer.PLAYTEST);
         }
 
         /// <summary>
-        /// Callback for the "Open Redshirt Demos Folder" tool strip menu item
+        /// Callback for the "Open Beta Demos Folder" tool strip menu item
         /// </summary>
-        /// <param name="sender">The "Open Redshirt Demos Folder" tool strip menu item</param>
+        /// <param name="sender">The "Open Beta Demos Folder" tool strip menu item</param>
         /// <param name="e">Event parameters</param>
-        private void openRedshirtDemosFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openBetaDemosFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.gameClient.OpenDemosFolder(GameServer.REDSHIRT);
+            this.gameClient.OpenDemosFolder(GameServer.BETA);
         }
 
         /// <summary>
-        /// Callback for the "Open Holodeck Screen Shots Folder" tool strip menu item
+        /// Callback for the "Open Live Screen Shots Folder" tool strip menu item
         /// </summary>
-        /// <param name="sender">The "Open Holodeck Screen Shots Folder" tool strip menu item</param>
+        /// <param name="sender">The "Open Live Screen Shots Folder" tool strip menu item</param>
         /// <param name="e">Event parameters</param>
-        private void openHolodeckScreenshotsFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openLiveScreenshotsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.gameClient.OpenScreenshotsFolder(GameServer.LIVE);
         }
 
         /// <summary>
-        /// Callback for the "Open Tribble Screen Shots Folder" tool strip menu item
+        /// Callback for the "Open Playtest Screen Shots Folder" tool strip menu item
         /// </summary>
-        /// <param name="sender">The "Open Tribble Screen Shots Folder" tool strip menu item</param>
+        /// <param name="sender">The "Open Playtest Screen Shots Folder" tool strip menu item</param>
         /// <param name="e">Event parameters</param>
-        private void openTribbleScreenshotsFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openPlaytestScreenshotsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.gameClient.OpenScreenshotsFolder(GameServer.PLAYTEST);
         }
 
         /// <summary>
-        /// Callback for the "Open Redshirt Screen Shots Folder" tool strip menu item
+        /// Callback for the "Open Beta Screen Shots Folder" tool strip menu item
         /// </summary>
-        /// <param name="sender">The "Open Redshirt Screen Shots Folder" tool strip menu item</param>
+        /// <param name="sender">The "Open Beta Screen Shots Folder" tool strip menu item</param>
         /// <param name="e">Event parameters</param>
-        private void openRedshirtScreenshotsFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openBetaScreenshotsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.gameClient.OpenScreenshotsFolder(GameServer.REDSHIRT);
+            this.gameClient.OpenScreenshotsFolder(GameServer.BETA);
         }
 
         /// <summary>
@@ -475,7 +475,7 @@ namespace CoDemoLauncher
         /// <param name="e">Event arguments</param>
         private void help_Event(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(CoDemoLauncherForm.wikiUrl);
+            System.Diagnostics.Process.Start(CoDemoLauncherForm.helpUrl);
         }
 
         /// <summary>
@@ -485,7 +485,7 @@ namespace CoDemoLauncher
         /// <param name="e">Event arguments</param>
         private void visitHomepage_Event(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(CoDemoLauncherForm.sourceforgeUrl);
+            System.Diagnostics.Process.Start(CoDemoLauncherForm.gitHubUrl);
         }
         
         /// <summary>
@@ -496,7 +496,7 @@ namespace CoDemoLauncher
         /// <param name="e">Event arguments</param>
         private void forumThread_Event(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(CoDemoLauncherForm.forumThreadUrl);
+            System.Diagnostics.Process.Start(CoDemoLauncherForm.demoGuideUrl);
         }
 
         /// <summary>
@@ -516,27 +516,31 @@ namespace CoDemoLauncher
         /// <param name="e">Event arguments</param>
         private void about_Event(object sender, EventArgs e)
         {
-            MessageBox.Show("Version " + Application.ProductVersion + "\n" +
-                "by RachelGarrett, maintained by Thon\n\n" +
-                "Special thanks to:\n" +
-                "- h2orat\n" +
-                "- Chris Fisher\n" +
-                "- Jeremy Randall\n" +
-                "- CaptNeo\n" +
-                "- JohoCrol\n" +
-                "- gaius\n" +
-                " -Leviathan99\n" +
-                " -Etherghost\n" +
-                " -Soriedem\n" +
-                " -maquis\n\n" +
+            MessageBox.Show
+            (
+                "Champions Online Demo Launcher v" + Application.ProductVersion + "\n\n" +
+                "Based off of the Star Trek Demo Launcher v2.11.2.0\n" +
+                "created by RachelGarrett and maintained by Thon.\n\n" +
+                "Ported to Champions Online by Spookoholic.\n\n" +
+                "The STO Demo Launcher Team gives special thanks to:\n" +
+                "• h2orat\n" +
+                "• Chris Fisher\n" +
+                "• Jeremy Randall\n" +
+                "• CaptNeo\n" +
+                "• JohoCrol\n" +
+                "• gaius\n" +
+                "• Leviathan99\n" +
+                "• Etherghost\n" +
+                "• Soriedem\n" +
+                "• maquis\n\n" +
                 "This tool is provided \"as-is\". Use at your own risk.\n\n" +
                 "This tool is not endorsed or supported by Cryptic Studios or\n" +
-                "Atari and is not a product licensed from CBS or Paramount.\n\n" +
-                "\"Star Trek\" and all other trademarks are the property of\n" +
-                "their respective owners.\n",
+                "Gearbox and is not a product licensed from CBS or Paramount.\n\n" +
+                "\"Star Trek,\" \"Champions Online,\" and all other trademarks are the property of their respective owners.\n",
                 Application.ProductName,
                 MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                MessageBoxIcon.Information
+            );;
         }
 
         /// <summary>
@@ -758,111 +762,111 @@ namespace CoDemoLauncher
 // end callbacks
 
         /// <summary>
-        /// Checks whether to display tribble and redshirt entries or not
+        /// Checks whether to display Playtest and Beta entries or not
         /// </summary>
         private void InitializeToolStrip()
         {
-            // if there is a tribble installation, add missing tribble entries
+            // if there is a Playtest installation, add missing Playtest entries
             if (this.gameClient.PlaytestExists)
             {
-                if (!this.openDemosFolderToolStripDropDownButton.DropDownItems.Contains(this.openTribbleDemosFolderToolStripMenuItem))
+                if (!this.openDemosFolderToolStripDropDownButton.DropDownItems.Contains(this.openPlaytestDemosFolderToolStripMenuItem))
                 {
-                    this.openDemosFolderToolStripDropDownButton.DropDownItems.Add(this.openTribbleDemosFolderToolStripMenuItem);
+                    this.openDemosFolderToolStripDropDownButton.DropDownItems.Add(this.openPlaytestDemosFolderToolStripMenuItem);
                 }
-                if (!this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Contains(this.openTribbleScreenshotsFolderToolStripMenuItem))
+                if (!this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Contains(this.openPlaytestScreenshotsFolderToolStripMenuItem))
                 {
-                    this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Add(this.openTribbleScreenshotsFolderToolStripMenuItem);
+                    this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Add(this.openPlaytestScreenshotsFolderToolStripMenuItem);
                 }
             }
-            // if there is no tribble installation, and the tribble entry is in the list, remove it.
+            // if there is no Playtest installation, and the Playtest entry is in the list, remove it.
             else
             {
-                if (this.openDemosFolderToolStripDropDownButton.DropDownItems.Contains(this.openTribbleDemosFolderToolStripMenuItem))
+                if (this.openDemosFolderToolStripDropDownButton.DropDownItems.Contains(this.openPlaytestDemosFolderToolStripMenuItem))
                 {
-                    this.openDemosFolderToolStripDropDownButton.DropDownItems.Remove(this.openTribbleDemosFolderToolStripMenuItem);
+                    this.openDemosFolderToolStripDropDownButton.DropDownItems.Remove(this.openPlaytestDemosFolderToolStripMenuItem);
                 }
-                if (this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Contains(this.openTribbleScreenshotsFolderToolStripMenuItem))
+                if (this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Contains(this.openPlaytestScreenshotsFolderToolStripMenuItem))
                 {
-                    this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Remove(this.openTribbleScreenshotsFolderToolStripMenuItem);
+                    this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Remove(this.openPlaytestScreenshotsFolderToolStripMenuItem);
                 }
             }
-            // if there is a redshirt installation, add missing redshirt entries
-            if (this.gameClient.RedshirtExists)
+            // if there is a Beta installation, add missing Beta entries
+            if (this.gameClient.BetaExists)
             {
-                if (!this.openDemosFolderToolStripDropDownButton.DropDownItems.Contains(this.openRedshirtDemosFolderToolStripMenuItem))
+                if (!this.openDemosFolderToolStripDropDownButton.DropDownItems.Contains(this.openBetaDemosFolderToolStripMenuItem))
                 {
-                    this.openDemosFolderToolStripDropDownButton.DropDownItems.Add(this.openRedshirtDemosFolderToolStripMenuItem);
+                    this.openDemosFolderToolStripDropDownButton.DropDownItems.Add(this.openBetaDemosFolderToolStripMenuItem);
                 }
-                if (!this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Contains(this.openRedshirtScreenshotsFolderToolStripMenuItem))
+                if (!this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Contains(this.openBetaScreenshotsFolderToolStripMenuItem))
                 {
-                    this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Add(this.openRedshirtScreenshotsFolderToolStripMenuItem);
+                    this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Add(this.openBetaScreenshotsFolderToolStripMenuItem);
                 }
             }
-            // if there is no redshirt installation, and the redshirt entry is in the list, remove it.
+            // if there is no Beta installation, and the Beta entry is in the list, remove it.
             else
             {
-                if (this.openDemosFolderToolStripDropDownButton.DropDownItems.Contains(this.openRedshirtDemosFolderToolStripMenuItem))
+                if (this.openDemosFolderToolStripDropDownButton.DropDownItems.Contains(this.openBetaDemosFolderToolStripMenuItem))
                 {
-                    this.openDemosFolderToolStripDropDownButton.DropDownItems.Remove(this.openRedshirtDemosFolderToolStripMenuItem);
+                    this.openDemosFolderToolStripDropDownButton.DropDownItems.Remove(this.openBetaDemosFolderToolStripMenuItem);
                 }
-                if (this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Contains(this.openRedshirtScreenshotsFolderToolStripMenuItem))
+                if (this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Contains(this.openBetaScreenshotsFolderToolStripMenuItem))
                 {
-                    this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Remove(this.openRedshirtScreenshotsFolderToolStripMenuItem);
+                    this.openScreenshotsFolderToolStripDropDownButton.DropDownItems.Remove(this.openBetaScreenshotsFolderToolStripMenuItem);
                 }
             }
         }
 
         /// <summary>
-        /// Checks whether to display tribble entry or not
+        /// Checks whether to display Playtest entry or not
         /// </summary>
         private void InitializeMenuStrip()
         {
-            // if there is a tribble installation, add missing tribble entries
+            // if there is a Playtest installation, add missing Playtest entries
             if (this.gameClient.PlaytestExists)
             {
-                if (!this.openDemosFolderMenuItem.DropDownItems.Contains(this.openTribbleDemosFolderMenuItem))
+                if (!this.openDemosFolderMenuItem.DropDownItems.Contains(this.openPlaytestDemosFolderMenuItem))
                 {
-                    this.openDemosFolderMenuItem.DropDownItems.Add(this.openTribbleDemosFolderMenuItem);
+                    this.openDemosFolderMenuItem.DropDownItems.Add(this.openPlaytestDemosFolderMenuItem);
                 }
-                if (!this.openScreenshotsFolderMenuItem.DropDownItems.Contains(this.openTribbleScreenshotsFolderMenuItem))
+                if (!this.openScreenshotsFolderMenuItem.DropDownItems.Contains(this.openPlaytestScreenshotsFolderMenuItem))
                 {
-                    this.openScreenshotsFolderMenuItem.DropDownItems.Add(this.openTribbleScreenshotsFolderMenuItem);
+                    this.openScreenshotsFolderMenuItem.DropDownItems.Add(this.openPlaytestScreenshotsFolderMenuItem);
                 }
             }
-            // if there is no tribble installation, and the tribble entry is in the list, remove it.
+            // if there is no Playtest installation, and the Playtest entry is in the list, remove it.
             else
             {
-                if (this.openDemosFolderMenuItem.DropDownItems.Contains(this.openTribbleDemosFolderMenuItem))
+                if (this.openDemosFolderMenuItem.DropDownItems.Contains(this.openPlaytestDemosFolderMenuItem))
                 {
-                    this.openDemosFolderMenuItem.DropDownItems.Remove(this.openTribbleDemosFolderMenuItem);
+                    this.openDemosFolderMenuItem.DropDownItems.Remove(this.openPlaytestDemosFolderMenuItem);
                 }
-                if (this.openScreenshotsFolderMenuItem.DropDownItems.Contains(this.openTribbleScreenshotsFolderMenuItem))
+                if (this.openScreenshotsFolderMenuItem.DropDownItems.Contains(this.openPlaytestScreenshotsFolderMenuItem))
                 {
-                    this.openScreenshotsFolderMenuItem.DropDownItems.Remove(this.openTribbleScreenshotsFolderMenuItem);
+                    this.openScreenshotsFolderMenuItem.DropDownItems.Remove(this.openPlaytestScreenshotsFolderMenuItem);
                 }
             }
-            // if there is a redshirt installation, add missing redshirt entries
-            if (this.gameClient.RedshirtExists)
+            // if there is a Beta installation, add missing Beta entries
+            if (this.gameClient.BetaExists)
             {
-                if (!this.openDemosFolderMenuItem.DropDownItems.Contains(this.openRedshirtDemosFolderMenuItem))
+                if (!this.openDemosFolderMenuItem.DropDownItems.Contains(this.openBetaDemosFolderMenuItem))
                 {
-                    this.openDemosFolderMenuItem.DropDownItems.Add(this.openRedshirtDemosFolderMenuItem);
+                    this.openDemosFolderMenuItem.DropDownItems.Add(this.openBetaDemosFolderMenuItem);
                 }
-                if (!this.openScreenshotsFolderMenuItem.DropDownItems.Contains(this.openRedshirtScreenshotsFolderMenuItem))
+                if (!this.openScreenshotsFolderMenuItem.DropDownItems.Contains(this.openBetaScreenshotsFolderMenuItem))
                 {
-                    this.openScreenshotsFolderMenuItem.DropDownItems.Add(this.openRedshirtScreenshotsFolderMenuItem);
+                    this.openScreenshotsFolderMenuItem.DropDownItems.Add(this.openBetaScreenshotsFolderMenuItem);
                 }
             }
-            // if there is no redshirt installation, and the redshirt entry is in the list, remove it.
+            // if there is no Beta installation, and the Beta entry is in the list, remove it.
             else
             {
-                if (this.openDemosFolderMenuItem.DropDownItems.Contains(this.openRedshirtDemosFolderMenuItem))
+                if (this.openDemosFolderMenuItem.DropDownItems.Contains(this.openBetaDemosFolderMenuItem))
                 {
-                    this.openDemosFolderMenuItem.DropDownItems.Remove(this.openRedshirtDemosFolderMenuItem);
+                    this.openDemosFolderMenuItem.DropDownItems.Remove(this.openBetaDemosFolderMenuItem);
                 }
-                if (this.openScreenshotsFolderMenuItem.DropDownItems.Contains(this.openRedshirtScreenshotsFolderMenuItem))
+                if (this.openScreenshotsFolderMenuItem.DropDownItems.Contains(this.openBetaScreenshotsFolderMenuItem))
                 {
-                    this.openScreenshotsFolderMenuItem.DropDownItems.Remove(this.openRedshirtScreenshotsFolderMenuItem);
+                    this.openScreenshotsFolderMenuItem.DropDownItems.Remove(this.openBetaScreenshotsFolderMenuItem);
                 }
             }
         }
@@ -961,22 +965,26 @@ namespace CoDemoLauncher
         {
             this.demoInfos.Clear();
             List<string> demoFiles = new List<string>();
-            if(System.IO.Directory.Exists(this.gameClient.GetDemosPath(GameServer.LIVE)))
+
+            // Live demos
+            if (System.IO.Directory.Exists(this.gameClient.GetDemosPath(GameServer.LIVE)))
             {
-                // Holodeck demos
+
                demoFiles.AddRange(gameClient.GetDemoFileList(GameServer.LIVE));
             }
-            // Tribble demos
+
+            // Playtest demos
             if (this.gameClient.PlaytestExists
                 && System.IO.Directory.Exists(this.gameClient.GetDemosPath(GameServer.PLAYTEST)))
             {
                 demoFiles.AddRange(gameClient.GetDemoFileList(GameServer.PLAYTEST));
             }
-            // Redshirt demos
-            if (this.gameClient.RedshirtExists
-                && System.IO.Directory.Exists(this.gameClient.GetDemosPath(GameServer.REDSHIRT)))
+
+            // Beta demos
+            if (this.gameClient.BetaExists
+                && System.IO.Directory.Exists(this.gameClient.GetDemosPath(GameServer.BETA)))
             {
-                demoFiles.AddRange(gameClient.GetDemoFileList(GameServer.REDSHIRT));
+                demoFiles.AddRange(gameClient.GetDemoFileList(GameServer.BETA));
             }
 
             if (demoFiles.Count > 0)

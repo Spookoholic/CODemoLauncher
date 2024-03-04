@@ -41,7 +41,7 @@ namespace CoDemoLauncher.Parser
             // determine server
             if (filename.Contains(config.GetStringValue(GameClient.GameClientIniGroup, GameClient.LivePathIniKey))) result.Server = GameServer.LIVE;
             else if (filename.Contains(config.GetStringValue(GameClient.GameClientIniGroup, GameClient.PlaytestPathIniKey))) result.Server = GameServer.PLAYTEST;
-            else if (filename.Contains(config.GetStringValue(GameClient.GameClientIniGroup, GameClient.RedshirtPathIniKey))) result.Server = GameServer.REDSHIRT;
+            else if (filename.Contains(config.GetStringValue(GameClient.GameClientIniGroup, GameClient.BetaPathIniKey))) result.Server = GameServer.BETA;
             else result.Server = GameServer.EXTERN;
         }
 

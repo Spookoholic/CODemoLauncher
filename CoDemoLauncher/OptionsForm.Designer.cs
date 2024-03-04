@@ -54,23 +54,23 @@
             this.advancedTabPage = new System.Windows.Forms.TabPage();
             this.advancedTabLabel = new System.Windows.Forms.Label();
             this.gameClientGroupBox = new System.Windows.Forms.GroupBox();
+            this.betaBrowseButton = new System.Windows.Forms.Button();
+            this.betaPathTextBox = new System.Windows.Forms.TextBox();
+            this.betaInstallationPathLabel = new System.Windows.Forms.Label();
             this.gameClientBoxLabel = new System.Windows.Forms.Label();
-            this.tribbleBrowseButton = new System.Windows.Forms.Button();
-            this.holodeckPathBrowseButton = new System.Windows.Forms.Button();
-            this.stoInstallationPathBrowseButton = new System.Windows.Forms.Button();
-            this.tribblePathTextBox = new System.Windows.Forms.TextBox();
-            this.holodeckPathTextBox = new System.Windows.Forms.TextBox();
-            this.stoInstallationPathTextBox = new System.Windows.Forms.TextBox();
-            this.stoInstallationPathLabel = new System.Windows.Forms.Label();
-            this.tribbleInstallationPathLabel = new System.Windows.Forms.Label();
-            this.holodeckPathLabel = new System.Windows.Forms.Label();
+            this.playtestBrowseButton = new System.Windows.Forms.Button();
+            this.livePathBrowseButton = new System.Windows.Forms.Button();
+            this.coInstallationPathBrowseButton = new System.Windows.Forms.Button();
+            this.playtestPathTextBox = new System.Windows.Forms.TextBox();
+            this.livePathTextBox = new System.Windows.Forms.TextBox();
+            this.coInstallationPathTextBox = new System.Windows.Forms.TextBox();
+            this.coInstallationPathLabel = new System.Windows.Forms.Label();
+            this.playtestInstallationPathLabel = new System.Windows.Forms.Label();
+            this.livePathLabel = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.defaultsButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.redshirtBrowseButton = new System.Windows.Forms.Button();
-            this.redshirtPathTextBox = new System.Windows.Forms.TextBox();
-            this.redshirtInstallationPathLabel = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.generalTabPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -386,25 +386,54 @@
             // 
             this.gameClientGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gameClientGroupBox.Controls.Add(this.redshirtBrowseButton);
-            this.gameClientGroupBox.Controls.Add(this.redshirtPathTextBox);
-            this.gameClientGroupBox.Controls.Add(this.redshirtInstallationPathLabel);
+            this.gameClientGroupBox.Controls.Add(this.betaBrowseButton);
+            this.gameClientGroupBox.Controls.Add(this.betaPathTextBox);
+            this.gameClientGroupBox.Controls.Add(this.betaInstallationPathLabel);
             this.gameClientGroupBox.Controls.Add(this.gameClientBoxLabel);
-            this.gameClientGroupBox.Controls.Add(this.tribbleBrowseButton);
-            this.gameClientGroupBox.Controls.Add(this.holodeckPathBrowseButton);
-            this.gameClientGroupBox.Controls.Add(this.stoInstallationPathBrowseButton);
-            this.gameClientGroupBox.Controls.Add(this.tribblePathTextBox);
-            this.gameClientGroupBox.Controls.Add(this.holodeckPathTextBox);
-            this.gameClientGroupBox.Controls.Add(this.stoInstallationPathTextBox);
-            this.gameClientGroupBox.Controls.Add(this.stoInstallationPathLabel);
-            this.gameClientGroupBox.Controls.Add(this.tribbleInstallationPathLabel);
-            this.gameClientGroupBox.Controls.Add(this.holodeckPathLabel);
-            this.gameClientGroupBox.Location = new System.Drawing.Point(6, 46);
+            this.gameClientGroupBox.Controls.Add(this.playtestBrowseButton);
+            this.gameClientGroupBox.Controls.Add(this.livePathBrowseButton);
+            this.gameClientGroupBox.Controls.Add(this.coInstallationPathBrowseButton);
+            this.gameClientGroupBox.Controls.Add(this.playtestPathTextBox);
+            this.gameClientGroupBox.Controls.Add(this.livePathTextBox);
+            this.gameClientGroupBox.Controls.Add(this.coInstallationPathTextBox);
+            this.gameClientGroupBox.Controls.Add(this.coInstallationPathLabel);
+            this.gameClientGroupBox.Controls.Add(this.playtestInstallationPathLabel);
+            this.gameClientGroupBox.Controls.Add(this.livePathLabel);
+            this.gameClientGroupBox.Location = new System.Drawing.Point(6, 53);
             this.gameClientGroupBox.Name = "gameClientGroupBox";
             this.gameClientGroupBox.Size = new System.Drawing.Size(510, 163);
             this.gameClientGroupBox.TabIndex = 1;
             this.gameClientGroupBox.TabStop = false;
             this.gameClientGroupBox.Text = "Game Client";
+            // 
+            // betaBrowseButton
+            // 
+            this.betaBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.betaBrowseButton.Location = new System.Drawing.Point(429, 134);
+            this.betaBrowseButton.Name = "betaBrowseButton";
+            this.betaBrowseButton.Size = new System.Drawing.Size(75, 23);
+            this.betaBrowseButton.TabIndex = 12;
+            this.betaBrowseButton.Text = "Browse...";
+            this.betaBrowseButton.UseVisualStyleBackColor = true;
+            this.betaBrowseButton.Click += new System.EventHandler(this.browseBetaPathBrowse_Event);
+            // 
+            // betaPathTextBox
+            // 
+            this.betaPathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.betaPathTextBox.Location = new System.Drawing.Point(149, 136);
+            this.betaPathTextBox.Name = "betaPathTextBox";
+            this.betaPathTextBox.Size = new System.Drawing.Size(274, 20);
+            this.betaPathTextBox.TabIndex = 11;
+            // 
+            // betaInstallationPathLabel
+            // 
+            this.betaInstallationPathLabel.AutoSize = true;
+            this.betaInstallationPathLabel.Location = new System.Drawing.Point(6, 139);
+            this.betaInstallationPathLabel.Name = "betaInstallationPathLabel";
+            this.betaInstallationPathLabel.Size = new System.Drawing.Size(113, 13);
+            this.betaInstallationPathLabel.TabIndex = 10;
+            this.betaInstallationPathLabel.Text = "Beta installation folder:";
             // 
             // gameClientBoxLabel
             // 
@@ -415,95 +444,96 @@
             this.gameClientBoxLabel.Size = new System.Drawing.Size(498, 26);
             this.gameClientBoxLabel.TabIndex = 9;
             this.gameClientBoxLabel.Text = "In order to function properly, the demo launcher relies on the executable files o" +
-    "f Star Trek Online. You can manually set the paths to the game\'s installation fo" +
+    "f Champions Online. You can manually set the paths to the game\'s installation fo" +
     "lders.";
+            this.gameClientBoxLabel.Click += new System.EventHandler(this.gameClientBoxLabel_Click);
             // 
-            // tribbleBrowseButton
+            // playtestBrowseButton
             // 
-            this.tribbleBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tribbleBrowseButton.Location = new System.Drawing.Point(429, 105);
-            this.tribbleBrowseButton.Name = "tribbleBrowseButton";
-            this.tribbleBrowseButton.Size = new System.Drawing.Size(75, 23);
-            this.tribbleBrowseButton.TabIndex = 8;
-            this.tribbleBrowseButton.Text = "Browse...";
-            this.tribbleBrowseButton.UseVisualStyleBackColor = true;
-            this.tribbleBrowseButton.Click += new System.EventHandler(this.browseTribblePathBrowse_Event);
+            this.playtestBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.playtestBrowseButton.Location = new System.Drawing.Point(429, 105);
+            this.playtestBrowseButton.Name = "playtestBrowseButton";
+            this.playtestBrowseButton.Size = new System.Drawing.Size(75, 23);
+            this.playtestBrowseButton.TabIndex = 8;
+            this.playtestBrowseButton.Text = "Browse...";
+            this.playtestBrowseButton.UseVisualStyleBackColor = true;
+            this.playtestBrowseButton.Click += new System.EventHandler(this.browsePlaytestPathBrowse_Event);
             // 
-            // holodeckPathBrowseButton
+            // livePathBrowseButton
             // 
-            this.holodeckPathBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.holodeckPathBrowseButton.Location = new System.Drawing.Point(429, 76);
-            this.holodeckPathBrowseButton.Name = "holodeckPathBrowseButton";
-            this.holodeckPathBrowseButton.Size = new System.Drawing.Size(75, 23);
-            this.holodeckPathBrowseButton.TabIndex = 7;
-            this.holodeckPathBrowseButton.Text = "Browse...";
-            this.holodeckPathBrowseButton.UseVisualStyleBackColor = true;
-            this.holodeckPathBrowseButton.Click += new System.EventHandler(this.browseHolodeckPathBrowse_Event);
+            this.livePathBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.livePathBrowseButton.Location = new System.Drawing.Point(429, 76);
+            this.livePathBrowseButton.Name = "livePathBrowseButton";
+            this.livePathBrowseButton.Size = new System.Drawing.Size(75, 23);
+            this.livePathBrowseButton.TabIndex = 7;
+            this.livePathBrowseButton.Text = "Browse...";
+            this.livePathBrowseButton.UseVisualStyleBackColor = true;
+            this.livePathBrowseButton.Click += new System.EventHandler(this.browseLivePathBrowse_Event);
             // 
-            // stoInstallationPathBrowseButton
+            // coInstallationPathBrowseButton
             // 
-            this.stoInstallationPathBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.stoInstallationPathBrowseButton.Location = new System.Drawing.Point(429, 47);
-            this.stoInstallationPathBrowseButton.Name = "stoInstallationPathBrowseButton";
-            this.stoInstallationPathBrowseButton.Size = new System.Drawing.Size(75, 23);
-            this.stoInstallationPathBrowseButton.TabIndex = 6;
-            this.stoInstallationPathBrowseButton.Text = "Browse...";
-            this.stoInstallationPathBrowseButton.UseVisualStyleBackColor = true;
-            this.stoInstallationPathBrowseButton.Click += new System.EventHandler(this.browseStoInstallationPathBrowse_Event);
+            this.coInstallationPathBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.coInstallationPathBrowseButton.Location = new System.Drawing.Point(429, 47);
+            this.coInstallationPathBrowseButton.Name = "coInstallationPathBrowseButton";
+            this.coInstallationPathBrowseButton.Size = new System.Drawing.Size(75, 23);
+            this.coInstallationPathBrowseButton.TabIndex = 6;
+            this.coInstallationPathBrowseButton.Text = "Browse...";
+            this.coInstallationPathBrowseButton.UseVisualStyleBackColor = true;
+            this.coInstallationPathBrowseButton.Click += new System.EventHandler(this.browseCoInstallationPathBrowse_Event);
             // 
-            // tribblePathTextBox
+            // playtestPathTextBox
             // 
-            this.tribblePathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.playtestPathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tribblePathTextBox.Location = new System.Drawing.Point(149, 107);
-            this.tribblePathTextBox.Name = "tribblePathTextBox";
-            this.tribblePathTextBox.Size = new System.Drawing.Size(274, 20);
-            this.tribblePathTextBox.TabIndex = 5;
+            this.playtestPathTextBox.Location = new System.Drawing.Point(149, 107);
+            this.playtestPathTextBox.Name = "playtestPathTextBox";
+            this.playtestPathTextBox.Size = new System.Drawing.Size(274, 20);
+            this.playtestPathTextBox.TabIndex = 5;
             // 
-            // holodeckPathTextBox
+            // livePathTextBox
             // 
-            this.holodeckPathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.livePathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.holodeckPathTextBox.Location = new System.Drawing.Point(149, 78);
-            this.holodeckPathTextBox.Name = "holodeckPathTextBox";
-            this.holodeckPathTextBox.Size = new System.Drawing.Size(274, 20);
-            this.holodeckPathTextBox.TabIndex = 4;
+            this.livePathTextBox.Location = new System.Drawing.Point(149, 78);
+            this.livePathTextBox.Name = "livePathTextBox";
+            this.livePathTextBox.Size = new System.Drawing.Size(274, 20);
+            this.livePathTextBox.TabIndex = 4;
             // 
-            // stoInstallationPathTextBox
+            // coInstallationPathTextBox
             // 
-            this.stoInstallationPathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.coInstallationPathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.stoInstallationPathTextBox.Location = new System.Drawing.Point(149, 49);
-            this.stoInstallationPathTextBox.Name = "stoInstallationPathTextBox";
-            this.stoInstallationPathTextBox.Size = new System.Drawing.Size(274, 20);
-            this.stoInstallationPathTextBox.TabIndex = 3;
+            this.coInstallationPathTextBox.Location = new System.Drawing.Point(149, 49);
+            this.coInstallationPathTextBox.Name = "coInstallationPathTextBox";
+            this.coInstallationPathTextBox.Size = new System.Drawing.Size(274, 20);
+            this.coInstallationPathTextBox.TabIndex = 3;
             // 
-            // stoInstallationPathLabel
+            // coInstallationPathLabel
             // 
-            this.stoInstallationPathLabel.AutoSize = true;
-            this.stoInstallationPathLabel.Location = new System.Drawing.Point(6, 52);
-            this.stoInstallationPathLabel.Name = "stoInstallationPathLabel";
-            this.stoInstallationPathLabel.Size = new System.Drawing.Size(111, 13);
-            this.stoInstallationPathLabel.TabIndex = 2;
-            this.stoInstallationPathLabel.Text = "Game launcher folder:";
+            this.coInstallationPathLabel.AutoSize = true;
+            this.coInstallationPathLabel.Location = new System.Drawing.Point(6, 52);
+            this.coInstallationPathLabel.Name = "coInstallationPathLabel";
+            this.coInstallationPathLabel.Size = new System.Drawing.Size(111, 13);
+            this.coInstallationPathLabel.TabIndex = 2;
+            this.coInstallationPathLabel.Text = "Game launcher folder:";
             // 
-            // tribbleInstallationPathLabel
+            // playtestInstallationPathLabel
             // 
-            this.tribbleInstallationPathLabel.AutoSize = true;
-            this.tribbleInstallationPathLabel.Location = new System.Drawing.Point(6, 110);
-            this.tribbleInstallationPathLabel.Name = "tribbleInstallationPathLabel";
-            this.tribbleInstallationPathLabel.Size = new System.Drawing.Size(123, 13);
-            this.tribbleInstallationPathLabel.TabIndex = 1;
-            this.tribbleInstallationPathLabel.Text = "Tribble installation folder:";
+            this.playtestInstallationPathLabel.AutoSize = true;
+            this.playtestInstallationPathLabel.Location = new System.Drawing.Point(6, 110);
+            this.playtestInstallationPathLabel.Name = "playtestInstallationPathLabel";
+            this.playtestInstallationPathLabel.Size = new System.Drawing.Size(128, 13);
+            this.playtestInstallationPathLabel.TabIndex = 1;
+            this.playtestInstallationPathLabel.Text = "Playtest installation folder:";
             // 
-            // holodeckPathLabel
+            // livePathLabel
             // 
-            this.holodeckPathLabel.AutoSize = true;
-            this.holodeckPathLabel.Location = new System.Drawing.Point(6, 81);
-            this.holodeckPathLabel.Name = "holodeckPathLabel";
-            this.holodeckPathLabel.Size = new System.Drawing.Size(137, 13);
-            this.holodeckPathLabel.TabIndex = 0;
-            this.holodeckPathLabel.Text = "Holodeck installation folder:";
+            this.livePathLabel.AutoSize = true;
+            this.livePathLabel.Location = new System.Drawing.Point(6, 81);
+            this.livePathLabel.Name = "livePathLabel";
+            this.livePathLabel.Size = new System.Drawing.Size(111, 13);
+            this.livePathLabel.TabIndex = 0;
+            this.livePathLabel.Text = "Live installation folder:";
             // 
             // okButton
             // 
@@ -542,35 +572,6 @@
             // folderBrowserDialog
             // 
             this.folderBrowserDialog.ShowNewFolderButton = false;
-            // 
-            // redshirtBrowseButton
-            // 
-            this.redshirtBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.redshirtBrowseButton.Location = new System.Drawing.Point(429, 134);
-            this.redshirtBrowseButton.Name = "redshirtBrowseButton";
-            this.redshirtBrowseButton.Size = new System.Drawing.Size(75, 23);
-            this.redshirtBrowseButton.TabIndex = 12;
-            this.redshirtBrowseButton.Text = "Browse...";
-            this.redshirtBrowseButton.UseVisualStyleBackColor = true;
-            this.redshirtBrowseButton.Click += new System.EventHandler(this.browseRedshirtPathBrowse_Event);
-            // 
-            // redshirtPathTextBox
-            // 
-            this.redshirtPathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.redshirtPathTextBox.Location = new System.Drawing.Point(149, 136);
-            this.redshirtPathTextBox.Name = "redshirtPathTextBox";
-            this.redshirtPathTextBox.Size = new System.Drawing.Size(274, 20);
-            this.redshirtPathTextBox.TabIndex = 11;
-            // 
-            // redshirtInstallationPathLabel
-            // 
-            this.redshirtInstallationPathLabel.AutoSize = true;
-            this.redshirtInstallationPathLabel.Location = new System.Drawing.Point(6, 139);
-            this.redshirtInstallationPathLabel.Name = "redshirtInstallationPathLabel";
-            this.redshirtInstallationPathLabel.Size = new System.Drawing.Size(130, 13);
-            this.redshirtInstallationPathLabel.TabIndex = 10;
-            this.redshirtInstallationPathLabel.Text = "Redshirt installation folder:";
             // 
             // OptionsForm
             // 
@@ -618,15 +619,15 @@
         private System.Windows.Forms.Label advancedTabLabel;
         private System.Windows.Forms.GroupBox gameClientGroupBox;
         private System.Windows.Forms.Label gameClientBoxLabel;
-        private System.Windows.Forms.Button tribbleBrowseButton;
-        private System.Windows.Forms.Button holodeckPathBrowseButton;
-        private System.Windows.Forms.Button stoInstallationPathBrowseButton;
-        private System.Windows.Forms.TextBox tribblePathTextBox;
-        private System.Windows.Forms.TextBox holodeckPathTextBox;
-        private System.Windows.Forms.TextBox stoInstallationPathTextBox;
-        private System.Windows.Forms.Label stoInstallationPathLabel;
-        private System.Windows.Forms.Label tribbleInstallationPathLabel;
-        private System.Windows.Forms.Label holodeckPathLabel;
+        private System.Windows.Forms.Button playtestBrowseButton;
+        private System.Windows.Forms.Button livePathBrowseButton;
+        private System.Windows.Forms.Button coInstallationPathBrowseButton;
+        private System.Windows.Forms.TextBox playtestPathTextBox;
+        private System.Windows.Forms.TextBox livePathTextBox;
+        private System.Windows.Forms.TextBox coInstallationPathTextBox;
+        private System.Windows.Forms.Label coInstallationPathLabel;
+        private System.Windows.Forms.Label playtestInstallationPathLabel;
+        private System.Windows.Forms.Label livePathLabel;
         private System.Windows.Forms.GroupBox autoUpdateGroupBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown autoUpdateNumericUpDown;
@@ -647,8 +648,8 @@
         private System.Windows.Forms.NumericUpDown mruCountNumericUpDown;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox confirmDeleteCheckBox;
-        private System.Windows.Forms.Button redshirtBrowseButton;
-        private System.Windows.Forms.TextBox redshirtPathTextBox;
-        private System.Windows.Forms.Label redshirtInstallationPathLabel;
+        private System.Windows.Forms.Button betaBrowseButton;
+        private System.Windows.Forms.TextBox betaPathTextBox;
+        private System.Windows.Forms.Label betaInstallationPathLabel;
     }
 }

@@ -62,6 +62,7 @@
             this.replaceCostumesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtersMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeNotificationsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeInternalGameCommandErrorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeWaveformModulationUiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeScanConeFXToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.removeFXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,11 +77,10 @@
             this.replaceCostumesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.filtersToolStripDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.removeNotificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeInternalGameCommandErrorsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.removeWaveformModulationUiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeScanConeFxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeFXToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeInternalGameCommandErrorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeInternalGameCommandErrorsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer.ContentPanel.SuspendLayout();
             this.toolStripContainer.TopToolStripPanel.SuspendLayout();
@@ -312,7 +312,7 @@
             this.openDemoMenuItem.Image = global::CoDemoLauncher.Properties.Resources.openHS;
             this.openDemoMenuItem.Name = "openDemoMenuItem";
             this.openDemoMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openDemoMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.openDemoMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openDemoMenuItem.Text = "&Open...";
             this.openDemoMenuItem.Click += new System.EventHandler(this.openDemo_Event);
             // 
@@ -322,21 +322,21 @@
             this.closeDemoMenuItem.Name = "closeDemoMenuItem";
             this.closeDemoMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
             this.closeDemoMenuItem.ShowShortcutKeys = false;
-            this.closeDemoMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.closeDemoMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeDemoMenuItem.Text = "&Close";
             this.closeDemoMenuItem.Click += new System.EventHandler(this.close_Event);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(154, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // saveDemoMenuItem
             // 
             this.saveDemoMenuItem.Image = global::CoDemoLauncher.Properties.Resources.saveHS;
             this.saveDemoMenuItem.Name = "saveDemoMenuItem";
             this.saveDemoMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveDemoMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.saveDemoMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveDemoMenuItem.Text = "&Save";
             this.saveDemoMenuItem.Click += new System.EventHandler(this.save_Event);
             // 
@@ -344,7 +344,7 @@
             // 
             this.saveAsMenuItem.Image = global::CoDemoLauncher.Properties.Resources.SaveAsHS;
             this.saveAsMenuItem.Name = "saveAsMenuItem";
-            this.saveAsMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.saveAsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveAsMenuItem.Text = "Save &As...";
             this.saveAsMenuItem.Click += new System.EventHandler(this.saveAs_Event);
             // 
@@ -358,7 +358,7 @@
             this.replaceCostumesMenuItem,
             this.filtersMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // playPreviewMenuItem
@@ -366,7 +366,7 @@
             this.playPreviewMenuItem.Image = global::CoDemoLauncher.Properties.Resources.PlayPreviewHS;
             this.playPreviewMenuItem.Name = "playPreviewMenuItem";
             this.playPreviewMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F5)));
-            this.playPreviewMenuItem.Size = new System.Drawing.Size(325, 22);
+            this.playPreviewMenuItem.Size = new System.Drawing.Size(272, 22);
             this.playPreviewMenuItem.Text = "&Play Preview";
             this.playPreviewMenuItem.Click += new System.EventHandler(this.playPreview_Event);
             // 
@@ -375,7 +375,7 @@
             this.renderPreviewMenuItem.Image = global::CoDemoLauncher.Properties.Resources.RecordPreviewHS;
             this.renderPreviewMenuItem.Name = "renderPreviewMenuItem";
             this.renderPreviewMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.renderPreviewMenuItem.Size = new System.Drawing.Size(325, 22);
+            this.renderPreviewMenuItem.Size = new System.Drawing.Size(272, 22);
             this.renderPreviewMenuItem.Text = "&Render Preview...";
             this.renderPreviewMenuItem.Click += new System.EventHandler(this.renderDemo_Event);
             // 
@@ -385,21 +385,21 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.R)));
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(325, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(272, 22);
             this.toolStripMenuItem1.Text = "Record Preview &Audio...";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.recordDemoAudio_Event);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(322, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(269, 6);
             // 
             // replaceCostumesMenuItem
             // 
             this.replaceCostumesMenuItem.Image = global::CoDemoLauncher.Properties.Resources.CharacterSwapHS;
             this.replaceCostumesMenuItem.Name = "replaceCostumesMenuItem";
             this.replaceCostumesMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.replaceCostumesMenuItem.Size = new System.Drawing.Size(325, 22);
+            this.replaceCostumesMenuItem.Size = new System.Drawing.Size(272, 22);
             this.replaceCostumesMenuItem.Text = "Replace &Costumes...";
             this.replaceCostumesMenuItem.Click += new System.EventHandler(this.replaceCostumes_Event);
             // 
@@ -413,7 +413,7 @@
             this.removeFXToolStripMenuItem});
             this.filtersMenuItem.Image = global::CoDemoLauncher.Properties.Resources.FilterHS;
             this.filtersMenuItem.Name = "filtersMenuItem";
-            this.filtersMenuItem.Size = new System.Drawing.Size(325, 22);
+            this.filtersMenuItem.Size = new System.Drawing.Size(272, 22);
             this.filtersMenuItem.Text = "&Filters";
             // 
             // removeNotificationsMenuItem
@@ -421,16 +421,25 @@
             this.removeNotificationsMenuItem.Image = global::CoDemoLauncher.Properties.Resources.RemoveNotificationsHS;
             this.removeNotificationsMenuItem.Name = "removeNotificationsMenuItem";
             this.removeNotificationsMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.removeNotificationsMenuItem.Size = new System.Drawing.Size(344, 22);
+            this.removeNotificationsMenuItem.Size = new System.Drawing.Size(342, 22);
             this.removeNotificationsMenuItem.Text = "Remove &Notifications...";
             this.removeNotificationsMenuItem.Click += new System.EventHandler(this.removeNotifications_Event);
+            // 
+            // removeInternalGameCommandErrorsToolStripMenuItem
+            // 
+            this.removeInternalGameCommandErrorsToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.RemoveInternalGameErrorHS;
+            this.removeInternalGameCommandErrorsToolStripMenuItem.Name = "removeInternalGameCommandErrorsToolStripMenuItem";
+            this.removeInternalGameCommandErrorsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F6)));
+            this.removeInternalGameCommandErrorsToolStripMenuItem.Size = new System.Drawing.Size(342, 22);
+            this.removeInternalGameCommandErrorsToolStripMenuItem.Text = "Remove &Internal Game Command Errors...";
+            this.removeInternalGameCommandErrorsToolStripMenuItem.Click += new System.EventHandler(this.removeInternalGameCommandErrors_Event);
             // 
             // removeWaveformModulationUiMenuItem
             // 
             this.removeWaveformModulationUiMenuItem.Image = global::CoDemoLauncher.Properties.Resources.RemoveWaveformHS;
             this.removeWaveformModulationUiMenuItem.Name = "removeWaveformModulationUiMenuItem";
             this.removeWaveformModulationUiMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7;
-            this.removeWaveformModulationUiMenuItem.Size = new System.Drawing.Size(344, 22);
+            this.removeWaveformModulationUiMenuItem.Size = new System.Drawing.Size(342, 22);
             this.removeWaveformModulationUiMenuItem.Text = "Remove &Waveform Modulation UI...";
             this.removeWaveformModulationUiMenuItem.Click += new System.EventHandler(this.removeWaveformMinigame_Event);
             // 
@@ -439,7 +448,7 @@
             this.removeScanConeFXToolStripMenuItem1.Image = global::CoDemoLauncher.Properties.Resources.RemoveScanConeFxHS;
             this.removeScanConeFXToolStripMenuItem1.Name = "removeScanConeFXToolStripMenuItem1";
             this.removeScanConeFXToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F7)));
-            this.removeScanConeFXToolStripMenuItem1.Size = new System.Drawing.Size(344, 22);
+            this.removeScanConeFXToolStripMenuItem1.Size = new System.Drawing.Size(342, 22);
             this.removeScanConeFXToolStripMenuItem1.Text = "Remove &Scan Cone FX...";
             this.removeScanConeFXToolStripMenuItem1.Click += new System.EventHandler(this.removeScanConeFx_Event);
             // 
@@ -448,7 +457,7 @@
             this.removeFXToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.RemoveFxHS;
             this.removeFXToolStripMenuItem.Name = "removeFXToolStripMenuItem";
             this.removeFXToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8;
-            this.removeFXToolStripMenuItem.Size = new System.Drawing.Size(344, 22);
+            this.removeFXToolStripMenuItem.Size = new System.Drawing.Size(342, 22);
             this.removeFXToolStripMenuItem.Text = "Remove &FX...";
             this.removeFXToolStripMenuItem.Click += new System.EventHandler(this.removeFx_Event);
             // 
@@ -508,7 +517,7 @@
             this.playPreviewToolStripButton.Name = "playPreviewToolStripButton";
             this.playPreviewToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.playPreviewToolStripButton.Text = "Play Preview";
-            this.playPreviewToolStripButton.ToolTipText = "Playback preview with Star Trek Online";
+            this.playPreviewToolStripButton.ToolTipText = "Playback preview with Champions Online";
             this.playPreviewToolStripButton.Click += new System.EventHandler(this.playPreview_Event);
             // 
             // renderPreviewToolStripButton
@@ -519,7 +528,7 @@
             this.renderPreviewToolStripButton.Name = "renderPreviewToolStripButton";
             this.renderPreviewToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.renderPreviewToolStripButton.Text = "Render Preview";
-            this.renderPreviewToolStripButton.ToolTipText = "Render preview to image files in screen shots folder";
+            this.renderPreviewToolStripButton.ToolTipText = "Render preview to image files in screenshots folder";
             this.renderPreviewToolStripButton.Click += new System.EventHandler(this.renderDemo_Event);
             // 
             // recordPreviewAudioToolStripButton
@@ -574,6 +583,14 @@
     "";
             this.removeNotificationsToolStripMenuItem.Click += new System.EventHandler(this.removeNotifications_Event);
             // 
+            // removeInternalGameCommandErrorsToolStripMenuItem1
+            // 
+            this.removeInternalGameCommandErrorsToolStripMenuItem1.Image = global::CoDemoLauncher.Properties.Resources.RemoveInternalGameErrorHS;
+            this.removeInternalGameCommandErrorsToolStripMenuItem1.Name = "removeInternalGameCommandErrorsToolStripMenuItem1";
+            this.removeInternalGameCommandErrorsToolStripMenuItem1.Size = new System.Drawing.Size(296, 22);
+            this.removeInternalGameCommandErrorsToolStripMenuItem1.Text = "Remove Internal Game Command Errors...";
+            this.removeInternalGameCommandErrorsToolStripMenuItem1.Click += new System.EventHandler(this.removeInternalGameCommandErrors_Event);
+            // 
             // removeWaveformModulationUiToolStripMenuItem
             // 
             this.removeWaveformModulationUiToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.RemoveWaveformHS;
@@ -598,24 +615,7 @@
             this.removeFXToolStripMenuItem1.Text = "Remove FX...";
             this.removeFXToolStripMenuItem1.Click += new System.EventHandler(this.removeFx_Event);
             // 
-            // removeInternalGameCommandErrorsToolStripMenuItem
-            // 
-            this.removeInternalGameCommandErrorsToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.RemoveInternalGameErrorHS;
-            this.removeInternalGameCommandErrorsToolStripMenuItem.Name = "removeInternalGameCommandErrorsToolStripMenuItem";
-            this.removeInternalGameCommandErrorsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F6)));
-            this.removeInternalGameCommandErrorsToolStripMenuItem.Size = new System.Drawing.Size(344, 22);
-            this.removeInternalGameCommandErrorsToolStripMenuItem.Text = "Remove &Internal Game Command Errors...";
-            this.removeInternalGameCommandErrorsToolStripMenuItem.Click += new System.EventHandler(this.removeInternalGameCommandErrors_Event);
-            // 
-            // removeInternalGameCommandErrorsToolStripMenuItem1
-            // 
-            this.removeInternalGameCommandErrorsToolStripMenuItem1.Image = global::CoDemoLauncher.Properties.Resources.RemoveInternalGameErrorHS;
-            this.removeInternalGameCommandErrorsToolStripMenuItem1.Name = "removeInternalGameCommandErrorsToolStripMenuItem1";
-            this.removeInternalGameCommandErrorsToolStripMenuItem1.Size = new System.Drawing.Size(296, 22);
-            this.removeInternalGameCommandErrorsToolStripMenuItem1.Text = "Remove Internal Game Command Errors...";
-            this.removeInternalGameCommandErrorsToolStripMenuItem1.Click += new System.EventHandler(this.removeInternalGameCommandErrors_Event);
-            // 
-            // StoDemoEditorForm
+            // CoDemoEditorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -625,7 +625,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "StoDemoEditorForm";
+            this.Name = "CoDemoEditorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Demo Editor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StoDemoEditorForm_FormClosing);

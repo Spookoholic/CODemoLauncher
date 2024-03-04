@@ -9,8 +9,7 @@ using System.IO;
 using CoDemoLauncher.Helper;
 using Microsoft.Win32;
 
-// TODO:    Remove redshirt/Beta shard info tracking as it is unnecessary for Champions Online. 
-//          (CO only has 2 shards, Live and Playtest. There is no Beta shard.)
+// TODO:    Disable Beta shard info tracking as it is unnecessary for Champions Online at this time. 
 
 namespace CoDemoLauncher
 {
@@ -21,7 +20,7 @@ namespace CoDemoLauncher
     {
         LIVE,
         PLAYTEST,
-        REDSHIRT,
+        BETA,
         EXTERN
     }
 
@@ -74,7 +73,7 @@ namespace CoDemoLauncher
         public const string PathIniKey = "path";
         public const string LivePathIniKey = "livePath";
         public const string PlaytestPathIniKey = "playtestPath";
-        public const string RedshirtPathIniKey = "redshirtPath";
+        public const string BetaPathIniKey = "betaPath";
         public const string CoDemoLauncherIniGroup = "CoDemoLauncher";
         public const string VersionIniKey = "version";
 
@@ -96,10 +95,9 @@ namespace CoDemoLauncher
         private string playtestPath;
 
         /// <summary>
-        /// NOTE: This is not used by Champions Online as it does not have a Beta shard. 
-        /// The absolute path to the directory containing "GameClient.exe" for Redshirt
+        /// The absolute path to the directory containing "GameClient.exe" for Beta
         /// </summary>
-        private string redshirtPath;
+        private string betaPath;
 
         /// <summary>
         /// Indicates, if there is a playtest directory
@@ -107,10 +105,9 @@ namespace CoDemoLauncher
         private bool playtestExists = false;
 
         /// <summary>
-        /// NOTE: This is not used by Champions Online as it does not have a Beta shard. 
-        /// Indicates, if there is a playtest directory
+        /// Indicates, if there is a beta directory
         /// </summary>
-        private bool redshirtExists = false;
+        private bool betaExists = false;
 
         // begin properties
 
@@ -137,7 +134,7 @@ namespace CoDemoLauncher
         }
 
         /// <summary>
-        /// The absolute path to the directory containing "GameClient.exe" for Playtest shard
+        /// The absolute path to the directory containing "GameClient.exe" for the Playtest shard
         /// </summary>
         public string PlaytestPath
         {
@@ -148,14 +145,13 @@ namespace CoDemoLauncher
         }
 
         /// <summary>
-        /// NOTE: This is not used by Champions Online as it does not have a Beta branch. 
-        /// The absolute path to the directory containing "GameClient.exe" for Redshirt
+        /// The absolute path to the directory containing "GameClient.exe" for the Beta shard
         /// </summary>
-        public string RedshirtPath
+        public string BetaPath
         {
             get
             {
-                return this.redshirtPath;
+                return this.betaPath;
             }
         }
 
@@ -174,11 +170,11 @@ namespace CoDemoLauncher
         /// NOTE: This is not used by Champions Online as it does not have a Beta branch. 
         /// Indicates, if there is a Beta directory
         /// </summary>
-        public bool RedshirtExists
+        public bool BetaExists
         {
             get
             {
-                return this.redshirtExists;
+                return this.betaExists;
             }
         }
         // end properties
@@ -233,7 +229,7 @@ namespace CoDemoLauncher
                     config.Remove(GameClientIniGroup, PathIniKey);
                     config.Remove(GameClientIniGroup, LivePathIniKey);
                     config.Remove(GameClientIniGroup, PlaytestPathIniKey);
-                    config.Remove(GameClientIniGroup, RedshirtPathIniKey);
+                    config.Remove(GameClientIniGroup, BetaPathIniKey);
                     config.Save();
                 }
             }
@@ -363,15 +359,15 @@ namespace CoDemoLauncher
 
             this.playtestExists = System.IO.Directory.Exists(this.playtestPath);
 
-            // Fetch redshirt directory from config file
+            // Fetch beta directory from config file
             // NOTE: This is not used as Champions Online does not have a Beta shard
-            if (!config.Contains(GameClientIniGroup, RedshirtPathIniKey))
+            if (!config.Contains(GameClientIniGroup, BetaPathIniKey))
             {
-                config.PutValue(GameClientIniGroup, RedshirtPathIniKey, installLocation + "\\Star Trek Online\\Beta");
+                config.PutValue(GameClientIniGroup, BetaPathIniKey, installLocation + "\\Champions Online\\Beta");
             }
-            this.redshirtPath = config.GetStringValue(GameClientIniGroup, RedshirtPathIniKey);
+            this.betaPath = config.GetStringValue(GameClientIniGroup, BetaPathIniKey);
 
-            this.redshirtExists = System.IO.Directory.Exists(this.redshirtPath);
+            this.betaExists = System.IO.Directory.Exists(this.betaPath);
         }
 
         /// <summary>
@@ -380,7 +376,7 @@ namespace CoDemoLauncher
         public void Refresh()
         {
             this.playtestExists = System.IO.Directory.Exists(this.playtestPath);
-            this.redshirtExists = System.IO.Directory.Exists(this.redshirtPath);
+            this.betaExists = System.IO.Directory.Exists(this.betaPath);
         }
 
         /// <summary>
@@ -417,7 +413,7 @@ namespace CoDemoLauncher
         {
             if (server == GameServer.LIVE) return this.LivePath;
             else if (server == GameServer.PLAYTEST) return this.PlaytestPath;
-            else if (server == GameServer.REDSHIRT) return this.RedshirtPath;
+            else if (server == GameServer.BETA) return this.BetaPath;
             else if (server == GameServer.EXTERN) return this.LivePath;
             return "";
         }
@@ -431,7 +427,7 @@ namespace CoDemoLauncher
         {
             if (server == GameServer.LIVE) return "Live";
             else if (server == GameServer.PLAYTEST) return "Playtest";
-            else if (server == GameServer.REDSHIRT) return "Redshirt";
+            else if (server == GameServer.BETA) return "Beta";
             else if (server == GameServer.EXTERN) return "Unknown (will run on Live)";
             return "";
         }

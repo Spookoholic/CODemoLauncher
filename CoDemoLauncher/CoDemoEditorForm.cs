@@ -28,7 +28,7 @@ namespace CoDemoLauncher
         DemoInfo demo;
 
         /// <summary>
-        /// The Star Trek Online game client
+        /// The Champions Onlin game client
         /// </summary>
         GameClient gameClient;
 
@@ -136,7 +136,7 @@ namespace CoDemoLauncher
         }
 
         /// <summary>
-        /// Play the demo in Star Trek Online
+        /// Play the demo in Champions Online
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
@@ -166,7 +166,7 @@ namespace CoDemoLauncher
         }
 
         /// <summary>
-        /// Play the demo in Star Trek Online
+        /// Play the demo in Champions Online
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
@@ -182,7 +182,7 @@ namespace CoDemoLauncher
         /// <param name="e">Event arguments</param>
         public void renderDemo_Event(object sender, EventArgs e)
         {
-            string previewFileName = gameClient.GetDemosPath(this.demo.Server) + "\\StoDemoLauncherPreview.demo";
+            string previewFileName = gameClient.GetDemosPath(this.demo.Server) + "\\CoDemoLauncherPreview.demo";
             System.IO.File.WriteAllLines(previewFileName, this.fileContents.ToArray());
             if (System.IO.File.Exists(previewFileName))
             {
@@ -198,7 +198,7 @@ namespace CoDemoLauncher
         /// <param name="e">Event arguments</param>
         public void recordDemoAudio_Event(object sender, EventArgs e)
         {
-            string previewFileName = gameClient.GetDemosPath(this.demo.Server) + "\\StoDemoLauncherPreview.demo";
+            string previewFileName = gameClient.GetDemosPath(this.demo.Server) + "\\CoDemoLauncherPreview.demo";
             System.IO.File.WriteAllLines(previewFileName, this.fileContents.ToArray());
             if (System.IO.File.Exists(previewFileName))
             {

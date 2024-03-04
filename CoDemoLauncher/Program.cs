@@ -9,7 +9,7 @@ namespace CoDemoLauncher
 {
     static class Program
     {
-        public const string StoDemoLauncherIniGroup = "CoDemoLauncher";
+        public const string CoDemoLauncherIniGroup = "CoDemoLauncher";
         public const string VersionIniKey = "version";
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace CoDemoLauncher
             // Create the form, if a valid path was found
             if (!stoInstallLocation.Equals(""))
             {
-                ConfigurationFile.GetInstance().PutValue(StoDemoLauncherIniGroup, VersionIniKey, Application.ProductVersion);
+                ConfigurationFile.GetInstance().PutValue(CoDemoLauncherIniGroup, VersionIniKey, Application.ProductVersion);
                 SplashScreen.ShowSplashScreen();
                 CoDemoLauncherForm mainWindow = new CoDemoLauncherForm(new GameClient(stoInstallLocation));
                 SplashScreen.CloseSplashScreen();

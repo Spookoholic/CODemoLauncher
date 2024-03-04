@@ -30,7 +30,7 @@ namespace CoDemoLauncher
         /// </summary>
         /// <param name="demo">The DemoFileInfo with the information on the
         /// demo to render</param>
-        /// <param name="gameClient">The StoGameClient to use for rendering</param>
+        /// <param name="gameClient">The CoGameClient to use for rendering</param>
         public RenderDemoForm(DemoInfo demo, GameClient gameClient, string prefix)
         {
             InitializeComponent();
@@ -76,8 +76,8 @@ namespace CoDemoLauncher
             System.Threading.Thread.Sleep(10000);
             MessageBox.Show(
                 this,
-                "Please wait for \"Star Trek Online\" to finish rendering the\n"+
-                "demo. When rendering has completed, close \"Star Trek Online\"\n" +
+                "Please wait for \"Champions Online\" to finish rendering the\n"+
+                "demo. When rendering has completed, close \"Champions Online\"\n" +
                 "and click \"OK\" to restore your in-game video settings.",
                 "Creating Backup",
                 MessageBoxButtons.OK,

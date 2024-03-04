@@ -40,10 +40,10 @@ namespace CoDemoLauncher
 
             // Advanced Tab
             // Game Client Group
-            this.stoInstallationPathTextBox.Text = this.gameClient.InstallLocation;
-            this.holodeckPathTextBox.Text = this.gameClient.LivePath;
-            this.tribblePathTextBox.Text = this.gameClient.PlaytestPath;
-            this.redshirtPathTextBox.Text = this.gameClient.RedshirtPath;
+            this.coInstallationPathTextBox.Text = this.gameClient.InstallLocation;
+            this.livePathTextBox.Text = this.gameClient.LivePath;
+            this.playtestPathTextBox.Text = this.gameClient.PlaytestPath;
+            this.betaPathTextBox.Text = this.gameClient.BetaPath;
         }
 
         /// <summary>
@@ -97,20 +97,20 @@ namespace CoDemoLauncher
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
-        private void browseStoInstallationPathBrowse_Event(object sender, EventArgs e)
+        private void browseCoInstallationPathBrowse_Event(object sender, EventArgs e)
         {
-            if (System.IO.Directory.Exists(this.stoInstallationPathTextBox.Text)) this.folderBrowserDialog.SelectedPath = this.stoInstallationPathTextBox.Text;
+            if (System.IO.Directory.Exists(this.coInstallationPathTextBox.Text)) this.folderBrowserDialog.SelectedPath = this.coInstallationPathTextBox.Text;
             DialogResult dialogResult = this.folderBrowserDialog.ShowDialog();
             if (dialogResult == DialogResult.OK)
             {
-                this.stoInstallationPathTextBox.Text = folderBrowserDialog.SelectedPath;
-                if (!GameClient.ValidateCoInstallationPath(this.stoInstallationPathTextBox.Text))
+                this.coInstallationPathTextBox.Text = folderBrowserDialog.SelectedPath;
+                if (!GameClient.ValidateCoInstallationPath(this.coInstallationPathTextBox.Text))
                 {
                     MessageBox.Show(this,
                         "The folder you selected does not seem to be the folder\n" +
                         "of the game launcher. Please check, if it contains\n" +
-                        "\"Star Trek Online.exe\" and a sub-folder named\n" +
-                        "\"\\Star Trek Online\\Live\".",
+                        "\"Champions Online.exe\" and a sub-folder named\n" +
+                        "\"\\Champions Online\\Live\".",
                         "Invalid Game Launcher Folder",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
@@ -123,9 +123,9 @@ namespace CoDemoLauncher
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
-        private void browseHolodeckPathBrowse_Event(object sender, EventArgs e)
+        private void browseLivePathBrowse_Event(object sender, EventArgs e)
         {
-            this.BrowseServerPath(this.holodeckPathTextBox);
+            this.BrowseServerPath(this.livePathTextBox);
         }
 
         /// <summary>
@@ -133,9 +133,9 @@ namespace CoDemoLauncher
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
-        private void browseTribblePathBrowse_Event(object sender, EventArgs e)
+        private void browsePlaytestPathBrowse_Event(object sender, EventArgs e)
         {
-            this.BrowseServerPath(this.tribblePathTextBox);
+            this.BrowseServerPath(this.playtestPathTextBox);
         }
 
         /// <summary>
@@ -143,9 +143,9 @@ namespace CoDemoLauncher
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
-        private void browseRedshirtPathBrowse_Event(object sender, EventArgs e)
+        private void browseBetaPathBrowse_Event(object sender, EventArgs e)
         {
-            this.BrowseServerPath(this.redshirtPathTextBox);
+            this.BrowseServerPath(this.betaPathTextBox);
         }
 
         /// <summary>
@@ -184,10 +184,10 @@ namespace CoDemoLauncher
                 {
                     this.gameClient.UpdatePaths(stoInstallDirectory);
                 }
-                this.stoInstallationPathTextBox.Text = this.gameClient.InstallLocation;
-                this.holodeckPathTextBox.Text = this.gameClient.LivePath;
-                this.tribblePathTextBox.Text = this.gameClient.PlaytestPath;
-                this.redshirtPathTextBox.Text = this.gameClient.RedshirtPath;
+                this.coInstallationPathTextBox.Text = this.gameClient.InstallLocation;
+                this.livePathTextBox.Text = this.gameClient.LivePath;
+                this.playtestPathTextBox.Text = this.gameClient.PlaytestPath;
+                this.betaPathTextBox.Text = this.gameClient.BetaPath;
             }
         }
 
@@ -213,13 +213,13 @@ namespace CoDemoLauncher
             // Advanced tab
             // Game Client group
             // Game client path
-            if (GameClient.ValidateCoInstallationPath(this.stoInstallationPathTextBox.Text))
+            if (GameClient.ValidateCoInstallationPath(this.coInstallationPathTextBox.Text))
             {
-                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.PathIniKey, this.stoInstallationPathTextBox.Text);
+                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.PathIniKey, this.coInstallationPathTextBox.Text);
             }
             else
             {
-                this.stoInstallationPathTextBox.Text = this.gameClient.InstallLocation;
+                this.coInstallationPathTextBox.Text = this.gameClient.InstallLocation;
                 MessageBox.Show(this,
                     "The folder you selected does not seem to be the folder\n" +
                     "of the game launcher. Your changes to the game launcher\n" +
@@ -228,56 +228,56 @@ namespace CoDemoLauncher
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-            // Holodeck path
-            if (GameClient.ValidateServerPath(this.holodeckPathTextBox.Text))
+            // Live path
+            if (GameClient.ValidateServerPath(this.livePathTextBox.Text))
             {
-                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.LivePathIniKey, this.holodeckPathTextBox.Text);
+                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.LivePathIniKey, this.livePathTextBox.Text);
             }
             else
             {
-                this.holodeckPathTextBox.Text = this.gameClient.LivePath;
+                this.livePathTextBox.Text = this.gameClient.LivePath;
                 MessageBox.Show(this,
                     "The folder you selected does not seem to be a game client\n" +
-                    "installation. Your changes to the Holodeck client path\n" +
+                    "installation. Your changes to the Live client path\n" +
                     "will be ignored.",
                     "Invalid Game Client Folder",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-            // Tribble path
-            if (GameClient.ValidateServerPath(this.tribblePathTextBox.Text))
+            // Playtest path
+            if (GameClient.ValidateServerPath(this.playtestPathTextBox.Text))
             {
-                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.PlaytestPathIniKey, this.tribblePathTextBox.Text);
+                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.PlaytestPathIniKey, this.playtestPathTextBox.Text);
             }
             else
             {
-                this.tribblePathTextBox.Text = this.gameClient.PlaytestPath;
+                this.playtestPathTextBox.Text = this.gameClient.PlaytestPath;
                 MessageBox.Show(this,
                     "The folder you selected does not seem to be a game client\n" +
-                    "installation. Your changes to the Tribble client path\n" +
+                    "installation. Your changes to the Playtest client path\n" +
                     "will be ignored.",
                     "Invalid Game Client Folder",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-            this.gameClient.UpdatePaths(this.stoInstallationPathTextBox.Text);
+            this.gameClient.UpdatePaths(this.coInstallationPathTextBox.Text);
             // Redshirt path
-            if (GameClient.ValidateServerPath(this.redshirtPathTextBox.Text))
+            if (GameClient.ValidateServerPath(this.betaPathTextBox.Text))
             {
-                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.RedshirtPathIniKey, this.redshirtPathTextBox.Text);
+                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.BetaPathIniKey, this.betaPathTextBox.Text);
             }
             else
             {
-                this.redshirtPathTextBox.Text = this.gameClient.RedshirtPath;
+                this.betaPathTextBox.Text = this.gameClient.BetaPath;
                 MessageBox.Show(this,
                     "The folder you selected does not seem to be a game client\n" +
-                    "installation. Your changes to the Redshirt client path\n" +
+                    "installation. Your changes to the Beta client path\n" +
                     "will be ignored.",
                     "Invalid Game Client Folder",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-            this.gameClient.UpdatePaths(this.stoInstallationPathTextBox.Text);
+            this.gameClient.UpdatePaths(this.coInstallationPathTextBox.Text);
         }
 
 // end callbacks
@@ -314,6 +314,11 @@ namespace CoDemoLauncher
                         MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void gameClientBoxLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
