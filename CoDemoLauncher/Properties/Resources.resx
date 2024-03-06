@@ -166,8 +166,8 @@
   <data name="RecordPreviewAudio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RecordPreviewAudio.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Redshirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Redshirt.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BetaIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BetaIcon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ForumsHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ForumsHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +178,8 @@
   <data name="RenameHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RenameHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StarfleetInstructor16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StarfleetInstructor16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LiveIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LiveIcon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BackupHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackupHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +202,8 @@
   <data name="PlayHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TribbleIcon16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TribbleIcon16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlaytestIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlaytestIcon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CloseHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CloseHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

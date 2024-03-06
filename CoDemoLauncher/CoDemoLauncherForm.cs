@@ -56,7 +56,7 @@ namespace CoDemoLauncher
         /// <summary>
         /// Link to CO Demo Launcher Help page
         /// </summary>
-        private static string helpUrl = "https://github.com/Spookoholic/CODemoLauncher/releases";
+        private static string helpUrl = "https://github.com/Spookoholic/CODemoLauncher/blob/main/User%20Guide.md";
 
         /// <summary>
         /// Link to auto-update page
@@ -1727,6 +1727,11 @@ namespace CoDemoLauncher
             mruList.RemoveFile(fileName);
             mruList.SaveToConfig();
             this.UpdateMruFileList();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

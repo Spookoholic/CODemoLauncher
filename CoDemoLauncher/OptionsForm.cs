@@ -261,7 +261,7 @@ namespace CoDemoLauncher
                     MessageBoxIcon.Error);
             }
             this.gameClient.UpdatePaths(this.coInstallationPathTextBox.Text);
-            // Redshirt path
+            // Beta path
             if (GameClient.ValidateServerPath(this.betaPathTextBox.Text))
             {
                 this.config.PutValue(GameClient.GameClientIniGroup, GameClient.BetaPathIniKey, this.betaPathTextBox.Text);

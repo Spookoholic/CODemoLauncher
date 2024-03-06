@@ -77,7 +77,7 @@
             this.MinimizeBox = false;
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Star TRek Online Demo Launcher";
+            this.Text = "Champions Online Demo Launcher";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

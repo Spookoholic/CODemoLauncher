@@ -201,7 +201,7 @@
             this.playDemoToolStripMenuItem.Name = "playDemoToolStripMenuItem";
             this.playDemoToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.playDemoToolStripMenuItem.Text = "Play Demo";
-            this.playDemoToolStripMenuItem.ToolTipText = "Playback demo with Star Trek Online";
+            this.playDemoToolStripMenuItem.ToolTipText = "Playback demo with Champions Online";
             this.playDemoToolStripMenuItem.Click += new System.EventHandler(this.playDemo_Event);
             // 
             // playDemoNoUIToolStripMenuItem
@@ -211,7 +211,7 @@
             this.playDemoNoUIToolStripMenuItem.Name = "playDemoNoUIToolStripMenuItem";
             this.playDemoNoUIToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.playDemoNoUIToolStripMenuItem.Text = "Play Demo (No UI)";
-            this.playDemoNoUIToolStripMenuItem.ToolTipText = "Playback demo with Star Trek Online without the user interface.";
+            this.playDemoNoUIToolStripMenuItem.ToolTipText = "Playback demo with Champions Online without the user interface.";
             this.playDemoNoUIToolStripMenuItem.Click += new System.EventHandler(this.playDemoNoUI_Event);
             // 
             // renderDemoToolStripMenuItem
@@ -637,7 +637,7 @@
             this.toolbarMenuItem.Checked = true;
             this.toolbarMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolbarMenuItem.Name = "toolbarMenuItem";
-            this.toolbarMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.toolbarMenuItem.Size = new System.Drawing.Size(205, 22);
             this.toolbarMenuItem.Text = "&Toolbar";
             this.toolbarMenuItem.Click += new System.EventHandler(this.toolbarMenuItem_Click);
             // 
@@ -646,14 +646,14 @@
             this.statusBarMenuItem.Checked = true;
             this.statusBarMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.statusBarMenuItem.Name = "statusBarMenuItem";
-            this.statusBarMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.statusBarMenuItem.Size = new System.Drawing.Size(205, 22);
             this.statusBarMenuItem.Text = "Status &bar";
             this.statusBarMenuItem.Click += new System.EventHandler(this.statusBarMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(206, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(202, 6);
             // 
             // openDemosFolderMenuItem
             // 
@@ -663,33 +663,33 @@
             this.openBetaDemosFolderMenuItem});
             this.openDemosFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.MacroHS;
             this.openDemosFolderMenuItem.Name = "openDemosFolderMenuItem";
-            this.openDemosFolderMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.openDemosFolderMenuItem.Size = new System.Drawing.Size(205, 22);
             this.openDemosFolderMenuItem.Text = "Open &Demos Folder";
             // 
             // openLiveDemosFolderMenuItem
             // 
-            this.openLiveDemosFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.StarfleetInstructor16;
+            this.openLiveDemosFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.LiveIcon;
             this.openLiveDemosFolderMenuItem.Name = "openLiveDemosFolderMenuItem";
             this.openLiveDemosFolderMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.openLiveDemosFolderMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.openLiveDemosFolderMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openLiveDemosFolderMenuItem.Text = "&Live";
             this.openLiveDemosFolderMenuItem.Click += new System.EventHandler(this.openLiveDemosFolderToolStripMenuItem_Click);
             // 
             // openPlaytestDemosFolderMenuItem
             // 
-            this.openPlaytestDemosFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.TribbleIcon16;
+            this.openPlaytestDemosFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.PlaytestIcon;
             this.openPlaytestDemosFolderMenuItem.Name = "openPlaytestDemosFolderMenuItem";
             this.openPlaytestDemosFolderMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F11)));
-            this.openPlaytestDemosFolderMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.openPlaytestDemosFolderMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openPlaytestDemosFolderMenuItem.Text = "&Playtest";
             this.openPlaytestDemosFolderMenuItem.Click += new System.EventHandler(this.openPlaytestDemosFolderToolStripMenuItem_Click);
             // 
             // openBetaDemosFolderMenuItem
             // 
-            this.openBetaDemosFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.Redshirt;
+            this.openBetaDemosFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.BetaIcon;
             this.openBetaDemosFolderMenuItem.Name = "openBetaDemosFolderMenuItem";
             this.openBetaDemosFolderMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F11)));
-            this.openBetaDemosFolderMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.openBetaDemosFolderMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openBetaDemosFolderMenuItem.Text = "&Beta";
             this.openBetaDemosFolderMenuItem.Click += new System.EventHandler(this.openBetaDemosFolderToolStripMenuItem_Click);
             // 
@@ -701,12 +701,12 @@
             this.openBetaScreenshotsFolderMenuItem});
             this.openScreenshotsFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.InsertPictureHS;
             this.openScreenshotsFolderMenuItem.Name = "openScreenshotsFolderMenuItem";
-            this.openScreenshotsFolderMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.openScreenshotsFolderMenuItem.Text = "Open &Screen Shots Folder";
+            this.openScreenshotsFolderMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.openScreenshotsFolderMenuItem.Text = "Open &Screenshots Folder";
             // 
             // openLiveScreenshotsFolderMenuItem
             // 
-            this.openLiveScreenshotsFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.StarfleetInstructor16;
+            this.openLiveScreenshotsFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.LiveIcon;
             this.openLiveScreenshotsFolderMenuItem.Name = "openLiveScreenshotsFolderMenuItem";
             this.openLiveScreenshotsFolderMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F12;
             this.openLiveScreenshotsFolderMenuItem.Size = new System.Drawing.Size(172, 22);
@@ -715,7 +715,7 @@
             // 
             // openPlaytestScreenshotsFolderMenuItem
             // 
-            this.openPlaytestScreenshotsFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.TribbleIcon16;
+            this.openPlaytestScreenshotsFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.PlaytestIcon;
             this.openPlaytestScreenshotsFolderMenuItem.Name = "openPlaytestScreenshotsFolderMenuItem";
             this.openPlaytestScreenshotsFolderMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F12)));
             this.openPlaytestScreenshotsFolderMenuItem.Size = new System.Drawing.Size(172, 22);
@@ -724,7 +724,7 @@
             // 
             // openBetaScreenshotsFolderMenuItem
             // 
-            this.openBetaScreenshotsFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.Redshirt;
+            this.openBetaScreenshotsFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.BetaIcon;
             this.openBetaScreenshotsFolderMenuItem.Name = "openBetaScreenshotsFolderMenuItem";
             this.openBetaScreenshotsFolderMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F12)));
             this.openBetaScreenshotsFolderMenuItem.Size = new System.Drawing.Size(172, 22);
@@ -734,14 +734,14 @@
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(206, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(202, 6);
             // 
             // refreshMenuItem
             // 
             this.refreshMenuItem.Image = global::CoDemoLauncher.Properties.Resources.RefreshHS;
             this.refreshMenuItem.Name = "refreshMenuItem";
             this.refreshMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.refreshMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.refreshMenuItem.Size = new System.Drawing.Size(205, 22);
             this.refreshMenuItem.Text = "&Refresh";
             this.refreshMenuItem.Click += new System.EventHandler(this.refresh_Event);
             // 
@@ -908,6 +908,7 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // helpMenuItem
             // 
@@ -988,7 +989,7 @@
             this.aboutToolStripButton});
             this.toolStrip.Location = new System.Drawing.Point(3, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(300, 25);
+            this.toolStrip.Size = new System.Drawing.Size(269, 25);
             this.toolStrip.TabIndex = 0;
             this.toolStrip.Text = "Tool Strip";
             // 
@@ -1100,7 +1101,7 @@
             // 
             // openLiveDemosFolderToolStripMenuItem
             // 
-            this.openLiveDemosFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.StarfleetInstructor16;
+            this.openLiveDemosFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.LiveIcon;
             this.openLiveDemosFolderToolStripMenuItem.Name = "openLiveDemosFolderToolStripMenuItem";
             this.openLiveDemosFolderToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.openLiveDemosFolderToolStripMenuItem.Text = "Live";
@@ -1109,7 +1110,7 @@
             // 
             // openPlaytestDemosFolderToolStripMenuItem
             // 
-            this.openPlaytestDemosFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.TribbleIcon16;
+            this.openPlaytestDemosFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.PlaytestIcon;
             this.openPlaytestDemosFolderToolStripMenuItem.Name = "openPlaytestDemosFolderToolStripMenuItem";
             this.openPlaytestDemosFolderToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.openPlaytestDemosFolderToolStripMenuItem.Text = "Playtest";
@@ -1118,7 +1119,7 @@
             // 
             // openBetaDemosFolderToolStripMenuItem
             // 
-            this.openBetaDemosFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.Redshirt;
+            this.openBetaDemosFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.BetaIcon;
             this.openBetaDemosFolderToolStripMenuItem.Name = "openBetaDemosFolderToolStripMenuItem";
             this.openBetaDemosFolderToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.openBetaDemosFolderToolStripMenuItem.Text = "Beta";
@@ -1141,7 +1142,7 @@
             // 
             // openLiveScreenshotsFolderToolStripMenuItem
             // 
-            this.openLiveScreenshotsFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.StarfleetInstructor16;
+            this.openLiveScreenshotsFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.LiveIcon;
             this.openLiveScreenshotsFolderToolStripMenuItem.Name = "openLiveScreenshotsFolderToolStripMenuItem";
             this.openLiveScreenshotsFolderToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.openLiveScreenshotsFolderToolStripMenuItem.Text = "Live";
@@ -1150,7 +1151,7 @@
             // 
             // openPlaytestScreenshotsFolderToolStripMenuItem
             // 
-            this.openPlaytestScreenshotsFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.TribbleIcon16;
+            this.openPlaytestScreenshotsFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.PlaytestIcon;
             this.openPlaytestScreenshotsFolderToolStripMenuItem.Name = "openPlaytestScreenshotsFolderToolStripMenuItem";
             this.openPlaytestScreenshotsFolderToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.openPlaytestScreenshotsFolderToolStripMenuItem.Text = "Playtest";
@@ -1159,7 +1160,7 @@
             // 
             // openBetaScreenshotsFolderToolStripMenuItem
             // 
-            this.openBetaScreenshotsFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.Redshirt;
+            this.openBetaScreenshotsFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.BetaIcon;
             this.openBetaScreenshotsFolderToolStripMenuItem.Name = "openBetaScreenshotsFolderToolStripMenuItem";
             this.openBetaScreenshotsFolderToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.openBetaScreenshotsFolderToolStripMenuItem.Text = "Beta";

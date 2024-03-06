@@ -264,7 +264,7 @@ namespace CoDemoLauncher
                     "If you want to continue, please select the\n" +
                     "\"Champions Online.exe\" from your installation directory\n" +
                     "in the following dialog.",
-                    "Could Not Find Star Trek Online",
+                    "Could Not Find Champions Online",
                     MessageBoxButtons.OKCancel,
                     MessageBoxIcon.Warning,
                     MessageBoxDefaultButton.Button1);

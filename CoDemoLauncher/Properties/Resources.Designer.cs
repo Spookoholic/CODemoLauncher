@@ -93,6 +93,16 @@ namespace CoDemoLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BetaIcon {
+            get {
+                object obj = ResourceManager.GetObject("BetaIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CaseSensitive {
             get {
                 object obj = ResourceManager.GetObject("CaseSensitive", resourceCulture);
@@ -233,6 +243,16 @@ namespace CoDemoLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LiveIcon {
+            get {
+                object obj = ResourceManager.GetObject("LiveIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MacroHS {
             get {
                 object obj = ResourceManager.GetObject("MacroHS", resourceCulture);
@@ -313,6 +333,16 @@ namespace CoDemoLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PlaytestIcon {
+            get {
+                object obj = ResourceManager.GetObject("PlaytestIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RecordHS {
             get {
                 object obj = ResourceManager.GetObject("RecordHS", resourceCulture);
@@ -336,16 +366,6 @@ namespace CoDemoLauncher.Properties {
         internal static System.Drawing.Bitmap RecordPreviewHS {
             get {
                 object obj = ResourceManager.GetObject("RecordPreviewHS", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Redshirt {
-            get {
-                object obj = ResourceManager.GetObject("Redshirt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,26 +486,6 @@ namespace CoDemoLauncher.Properties {
         internal static System.Drawing.Bitmap Splash {
             get {
                 object obj = ResourceManager.GetObject("Splash", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap StarfleetInstructor16 {
-            get {
-                object obj = ResourceManager.GetObject("StarfleetInstructor16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TribbleIcon16 {
-            get {
-                object obj = ResourceManager.GetObject("TribbleIcon16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
