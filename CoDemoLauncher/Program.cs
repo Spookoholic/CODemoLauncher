@@ -22,14 +22,14 @@ namespace CoDemoLauncher
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Find the installation location of STO
-            string stoInstallLocation = GameClient.FindCoDirectory();
+            string coInstallLocation = GameClient.FindCoDirectory();
 
             // Create the form, if a valid path was found
-            if (!stoInstallLocation.Equals(""))
+            if (!coInstallLocation.Equals(""))
             {
                 ConfigurationFile.GetInstance().PutValue(CoDemoLauncherIniGroup, VersionIniKey, Application.ProductVersion);
                 SplashScreen.ShowSplashScreen();
-                CoDemoLauncherForm mainWindow = new CoDemoLauncherForm(new GameClient(stoInstallLocation));
+                CoDemoLauncherForm mainWindow = new CoDemoLauncherForm(new GameClient(coInstallLocation));
                 SplashScreen.CloseSplashScreen();
                 Application.Run(mainWindow);
             }

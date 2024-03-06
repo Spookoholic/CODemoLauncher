@@ -1414,7 +1414,7 @@ namespace CoDemoLauncher
                 {
                     string downloadUrl = contents.Substring(contents.IndexOf("http:"));
                     DialogResult dialogResult = MessageBox.Show(
-                        "Version " + contents.Substring(0, contents.IndexOf("\r")) + " of the Star Trek Online Demo Launcher\n" +
+                        "Version " + contents.Substring(0, contents.IndexOf("\r")) + " of the Champions Online Demo Launcher\n" +
                         "is available for downlaod. You are currently using version \n" +
                         Application.ProductVersion + ".\n" +
                         "Do you want to download the newer version?",
@@ -1430,7 +1430,7 @@ namespace CoDemoLauncher
                 else if (!silent)
                 {
                     MessageBox.Show(
-                       "You are running the most recent version of Star Trek Online Demo Launcher.",
+                       "You are running the most recent version of Champions Online Demo Launcher.",
                        "You are Up-To-Date",
                        MessageBoxButtons.OK,
                        MessageBoxIcon.Information);
