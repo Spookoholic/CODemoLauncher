@@ -61,7 +61,7 @@ namespace CoDemoLauncher
         }
 
         /// <summary>
-        /// Starts recording audio with "Star Trek Online"
+        /// Starts recording audio with "Champions Online"
         /// </summary>
         private void StartRecording()
         {

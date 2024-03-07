@@ -29,7 +29,7 @@ namespace CoDemoLauncher
         private List<string> targetContents;
 
         /// <summary>
-        /// Star Trek Online game client
+        /// Champions Online game client
         /// </summary>
         private GameClient gameClient;
 

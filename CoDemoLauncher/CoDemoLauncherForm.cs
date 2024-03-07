@@ -61,7 +61,7 @@ namespace CoDemoLauncher
         /// <summary>
         /// Link to auto-update page
         /// </summary>
-        private static string updateUrl = "https://raw.githubusercontent.com/RadioActivitii/STODemoLauncher/main/CoDemoLauncher/autoupdate.txt";
+        private static string updateUrl = "https://github.com/Spookoholic/CODemoLauncher";
 
         /// <summary>
         /// Silent background update thread
@@ -95,10 +95,10 @@ namespace CoDemoLauncher
         private List<ToolStripItem> mruMenuItems = new List<ToolStripItem>();
 
         /// <summary>
-        /// Constructor. Creates a new Star Trek Online Demo Launcher form
+        /// Constructor. Creates a new Champions Online Demo Launcher form
         /// </summary>
         /// <param name="installLocation">The absolute path to the directory
-        /// containing "Star Trek Online.exe"</param>
+        /// containing "Champions Online Online.exe"</param>
         public CoDemoLauncherForm(GameClient gameClient)
         {
             InitializeComponent();
@@ -544,7 +544,7 @@ namespace CoDemoLauncher
         }
 
         /// <summary>
-        /// Callback for "Edit Demo" event. Opens selected demo in new StoDemoEditor.
+        /// Callback for "Edit Demo" event. Opens selected demo in new CoDemoEditor.
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
@@ -554,7 +554,7 @@ namespace CoDemoLauncher
         }
 
         /// <summary>
-        /// Callback for "Backup Demo" event. Opens selected demo in new StoDemoEditor.
+        /// Callback for "Backup Demo" event. Opens selected demo in new CoDemoEditor.
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
@@ -572,7 +572,7 @@ namespace CoDemoLauncher
         }
 
         /// <summary>
-        /// Callback for "Refresh Backup" event. Opens selected demo in new StoDemoEditor.
+        /// Callback for "Refresh Backup" event. Opens selected demo in new CoDemoEditor.
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
@@ -1006,7 +1006,7 @@ namespace CoDemoLauncher
                     "Not demo files could be found. Either you do not have any\n" +
                     "\"demos\" directories or you have no recorded demo files.\n" +
                     "Record a demo using the \"\\demorecord [filename]\" and\n" +
-                    "\"\\demorecordstop\" commands in Star Trek Online.",
+                    "\"\\demorecordstop\" commands in Champions Online.",
                     "No Demo Files Found",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);

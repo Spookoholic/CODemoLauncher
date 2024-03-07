@@ -95,7 +95,7 @@ namespace CoDemoLauncher
         /// <returns>The path to the demos backup folder</returns>
         public string GetDemosBackupPath(GameServer server)
         {
-            return this.gameClient.GetDemosPath(server) + "\\StoDemoLauncherBackup";
+            return this.gameClient.GetDemosPath(server) + "\\CoDemoLauncherBackup";
         }
 
         /// <summary>
