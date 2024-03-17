@@ -614,7 +614,7 @@
             this.findToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.FindHS;
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             this.findToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.findToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.findToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.findToolStripMenuItem.Text = "&Find";
             this.findToolStripMenuItem.Click += new System.EventHandler(this.find_Event);
             // 
@@ -661,7 +661,7 @@
             this.openLiveDemosFolderMenuItem,
             this.openPlaytestDemosFolderMenuItem,
             this.openBetaDemosFolderMenuItem});
-            this.openDemosFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.MacroHS;
+            this.openDemosFolderMenuItem.Image = global::CoDemoLauncher.Properties.Resources.Folder;
             this.openDemosFolderMenuItem.Name = "openDemosFolderMenuItem";
             this.openDemosFolderMenuItem.Size = new System.Drawing.Size(205, 22);
             this.openDemosFolderMenuItem.Text = "Open &Demos Folder";
@@ -1092,7 +1092,7 @@
             this.openLiveDemosFolderToolStripMenuItem,
             this.openPlaytestDemosFolderToolStripMenuItem,
             this.openBetaDemosFolderToolStripMenuItem});
-            this.openDemosFolderToolStripDropDownButton.Image = global::CoDemoLauncher.Properties.Resources.MacroHS;
+            this.openDemosFolderToolStripDropDownButton.Image = global::CoDemoLauncher.Properties.Resources.Folder;
             this.openDemosFolderToolStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openDemosFolderToolStripDropDownButton.Name = "openDemosFolderToolStripDropDownButton";
             this.openDemosFolderToolStripDropDownButton.Size = new System.Drawing.Size(29, 22);
@@ -1103,7 +1103,7 @@
             // 
             this.openLiveDemosFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.LiveIcon;
             this.openLiveDemosFolderToolStripMenuItem.Name = "openLiveDemosFolderToolStripMenuItem";
-            this.openLiveDemosFolderToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.openLiveDemosFolderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openLiveDemosFolderToolStripMenuItem.Text = "Live";
             this.openLiveDemosFolderToolStripMenuItem.ToolTipText = "Open Live demos folder";
             this.openLiveDemosFolderToolStripMenuItem.Click += new System.EventHandler(this.openLiveDemosFolderToolStripMenuItem_Click);
@@ -1112,7 +1112,7 @@
             // 
             this.openPlaytestDemosFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.PlaytestIcon;
             this.openPlaytestDemosFolderToolStripMenuItem.Name = "openPlaytestDemosFolderToolStripMenuItem";
-            this.openPlaytestDemosFolderToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.openPlaytestDemosFolderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openPlaytestDemosFolderToolStripMenuItem.Text = "Playtest";
             this.openPlaytestDemosFolderToolStripMenuItem.ToolTipText = "Open Playtest demos folder";
             this.openPlaytestDemosFolderToolStripMenuItem.Click += new System.EventHandler(this.openPlaytestDemosFolderToolStripMenuItem_Click);
@@ -1121,7 +1121,7 @@
             // 
             this.openBetaDemosFolderToolStripMenuItem.Image = global::CoDemoLauncher.Properties.Resources.BetaIcon;
             this.openBetaDemosFolderToolStripMenuItem.Name = "openBetaDemosFolderToolStripMenuItem";
-            this.openBetaDemosFolderToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.openBetaDemosFolderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openBetaDemosFolderToolStripMenuItem.Text = "Beta";
             this.openBetaDemosFolderToolStripMenuItem.ToolTipText = "Open Beta demos folder";
             this.openBetaDemosFolderToolStripMenuItem.Click += new System.EventHandler(this.openBetaDemosFolderToolStripMenuItem_Click);

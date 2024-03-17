@@ -224,6 +224,7 @@
   <ItemGroup>
     <Content Include="autoupdate.html" />
     <Content Include="CODemoLauncherIcon.ico" />
+    <None Include="Resources\Folder.png" />
     <None Include="Resources\PlayNoUI.png" />
     <None Include="Resources\RemoveInternalGameErrorHS.png" />
     <None Include="Resources\Beta.png" />
