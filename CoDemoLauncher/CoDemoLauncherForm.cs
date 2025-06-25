@@ -46,7 +46,7 @@ namespace CoDemoLauncher
         /// <summary>
         /// Link to Champions Online Demo Guide
         /// </summary>
-        private static string demoGuideUrl = "http://forums.startrekonline.com/showthread.php?t=198721";
+        private static string demoGuideUrl = "https://docs.google.com/document/d/1xbklvBnUrSjWXgHkAlcuOc4ObU9n5K_hlJ1-D5AaZvI/";
 
         /// <summary>
         /// Link to CO Demo Launcher GitHub page
