@@ -54,9 +54,6 @@
             this.advancedTabPage = new System.Windows.Forms.TabPage();
             this.advancedTabLabel = new System.Windows.Forms.Label();
             this.gameClientGroupBox = new System.Windows.Forms.GroupBox();
-            this.betaBrowseButton = new System.Windows.Forms.Button();
-            this.betaPathTextBox = new System.Windows.Forms.TextBox();
-            this.betaInstallationPathLabel = new System.Windows.Forms.Label();
             this.gameClientBoxLabel = new System.Windows.Forms.Label();
             this.playtestBrowseButton = new System.Windows.Forms.Button();
             this.livePathBrowseButton = new System.Windows.Forms.Button();
@@ -384,9 +381,6 @@
             // 
             this.gameClientGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gameClientGroupBox.Controls.Add(this.betaBrowseButton);
-            this.gameClientGroupBox.Controls.Add(this.betaPathTextBox);
-            this.gameClientGroupBox.Controls.Add(this.betaInstallationPathLabel);
             this.gameClientGroupBox.Controls.Add(this.gameClientBoxLabel);
             this.gameClientGroupBox.Controls.Add(this.playtestBrowseButton);
             this.gameClientGroupBox.Controls.Add(this.livePathBrowseButton);
@@ -397,41 +391,12 @@
             this.gameClientGroupBox.Controls.Add(this.coInstallationPathLabel);
             this.gameClientGroupBox.Controls.Add(this.playtestInstallationPathLabel);
             this.gameClientGroupBox.Controls.Add(this.livePathLabel);
-            this.gameClientGroupBox.Location = new System.Drawing.Point(6, 53);
+            this.gameClientGroupBox.Location = new System.Drawing.Point(6, 61);
             this.gameClientGroupBox.Name = "gameClientGroupBox";
-            this.gameClientGroupBox.Size = new System.Drawing.Size(510, 163);
+            this.gameClientGroupBox.Size = new System.Drawing.Size(510, 141);
             this.gameClientGroupBox.TabIndex = 1;
             this.gameClientGroupBox.TabStop = false;
             this.gameClientGroupBox.Text = "Game Client";
-            // 
-            // betaBrowseButton
-            // 
-            this.betaBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.betaBrowseButton.Location = new System.Drawing.Point(429, 134);
-            this.betaBrowseButton.Name = "betaBrowseButton";
-            this.betaBrowseButton.Size = new System.Drawing.Size(75, 23);
-            this.betaBrowseButton.TabIndex = 12;
-            this.betaBrowseButton.Text = "Browse...";
-            this.betaBrowseButton.UseVisualStyleBackColor = true;
-            this.betaBrowseButton.Click += new System.EventHandler(this.browseBetaPathBrowse_Event);
-            // 
-            // betaPathTextBox
-            // 
-            this.betaPathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.betaPathTextBox.Location = new System.Drawing.Point(149, 136);
-            this.betaPathTextBox.Name = "betaPathTextBox";
-            this.betaPathTextBox.Size = new System.Drawing.Size(274, 20);
-            this.betaPathTextBox.TabIndex = 11;
-            // 
-            // betaInstallationPathLabel
-            // 
-            this.betaInstallationPathLabel.AutoSize = true;
-            this.betaInstallationPathLabel.Location = new System.Drawing.Point(6, 139);
-            this.betaInstallationPathLabel.Name = "betaInstallationPathLabel";
-            this.betaInstallationPathLabel.Size = new System.Drawing.Size(113, 13);
-            this.betaInstallationPathLabel.TabIndex = 10;
-            this.betaInstallationPathLabel.Text = "Beta installation folder:";
             // 
             // gameClientBoxLabel
             // 
@@ -646,8 +611,5 @@
         private System.Windows.Forms.NumericUpDown mruCountNumericUpDown;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox confirmDeleteCheckBox;
-        private System.Windows.Forms.Button betaBrowseButton;
-        private System.Windows.Forms.TextBox betaPathTextBox;
-        private System.Windows.Forms.Label betaInstallationPathLabel;
     }
 }

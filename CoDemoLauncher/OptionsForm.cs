@@ -43,7 +43,7 @@ namespace CoDemoLauncher
             this.coInstallationPathTextBox.Text = this.gameClient.InstallLocation;
             this.livePathTextBox.Text = this.gameClient.LivePath;
             this.playtestPathTextBox.Text = this.gameClient.PlaytestPath;
-            this.betaPathTextBox.Text = this.gameClient.BetaPath;
+            //  Beta Client Functionality Disabled: CO does not have a Beta test branch this.betaPathTextBox.Text = this.gameClient.BetaPath;
         }
 
         /// <summary>
@@ -143,10 +143,11 @@ namespace CoDemoLauncher
         /// </summary>
         /// <param name="sender">Triggering UI element</param>
         /// <param name="e">Event arguments</param>
-        private void browseBetaPathBrowse_Event(object sender, EventArgs e)
-        {
-            this.BrowseServerPath(this.betaPathTextBox);
-        }
+        //  Beta Client Functionality Disabled: CO does not have a Beta test branch
+        //  private void browseBetaPathBrowse_Event(object sender, EventArgs e)
+        //  {
+        //      this.BrowseServerPath(this.betaPathTextBox);
+        //  }
 
         /// <summary>
         /// "Defaults" event
@@ -187,7 +188,7 @@ namespace CoDemoLauncher
                 this.coInstallationPathTextBox.Text = this.gameClient.InstallLocation;
                 this.livePathTextBox.Text = this.gameClient.LivePath;
                 this.playtestPathTextBox.Text = this.gameClient.PlaytestPath;
-                this.betaPathTextBox.Text = this.gameClient.BetaPath;
+                //  Beta Client Functionality Disabled: CO does not have a Beta test branch this.betaPathTextBox.Text = this.gameClient.BetaPath;
             }
         }
 
@@ -261,22 +262,23 @@ namespace CoDemoLauncher
                     MessageBoxIcon.Error);
             }
             this.gameClient.UpdatePaths(this.coInstallationPathTextBox.Text);
-            // Beta path
-            if (GameClient.ValidateServerPath(this.betaPathTextBox.Text))
-            {
-                this.config.PutValue(GameClient.GameClientIniGroup, GameClient.BetaPathIniKey, this.betaPathTextBox.Text);
-            }
-            else
-            {
-                this.betaPathTextBox.Text = this.gameClient.BetaPath;
-                MessageBox.Show(this,
-                    "The folder you selected does not seem to be a game client\n" +
-                    "installation. Your changes to the Beta client path\n" +
-                    "will be ignored.",
-                    "Invalid Game Client Folder",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
+            //  Beta Client Functionality Disabled: CO does not have a Beta test branch
+
+            //if (GameClient.ValidateServerPath(this.betaPathTextBox.Text))
+            //{
+            //   this.config.PutValue(GameClient.GameClientIniGroup, GameClient.BetaPathIniKey, this.betaPathTextBox.Text);
+            //}
+            //else
+            //{
+            //    this.betaPathTextBox.Text = this.gameClient.BetaPath;
+            //    MessageBox.Show(this,
+            //        "The folder you selected does not seem to be a game client\n" +
+            //       "installation. Your changes to the Beta client path\n" +
+            //        "will be ignored.",
+            //        "Invalid Game Client Folder",
+            //       MessageBoxButtons.OK,
+            //        MessageBoxIcon.Error);
+            //}
             this.gameClient.UpdatePaths(this.coInstallationPathTextBox.Text);
         }
 
